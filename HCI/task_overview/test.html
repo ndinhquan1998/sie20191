@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEST</title>
+</head>
+<body>
+	<style type="text/css">
+		.class {
+			width: 50%;
+		}
+
+		.class canvas {
+			width: 100%;
+		}
+
+	</style>
+	<div class="class"><canvas id="polarChart"></canvas></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+	<script type="text/javascript">
+            var ctxPA = document.getElementById("polarChart").getContext('2d');
+            var myPolarChart = new Chart(ctxPA, {
+                type: 'polarArea',
+                data: {
+                  labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+                  datasets: [{
+                    data: [300, 50, 100, 40, 120],
+                    backgroundColor: ["rgba(219, 0, 0, 0.1)", "rgba(0, 165, 2, 0.1)", "rgba(255, 195, 15, 0.2)",
+                    "rgba(55, 59, 66, 0.1)", "rgba(0, 0, 0, 0.3)"
+                    ],
+                    hoverBackgroundColor: ["rgba(219, 0, 0, 0.2)", "rgba(0, 165, 2, 0.2)",
+                    "rgba(255, 195, 15, 0.3)", "rgba(55, 59, 66, 0.1)", "rgba(0, 0, 0, 0.4)"
+                    ]
+                  }]
+                },
+                options: {
+                responsive: true
+                }
+              });
+          </script>
+</body>
+</html>
