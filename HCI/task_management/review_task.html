@@ -20,8 +20,9 @@
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
    
-  <link href="hs.css" rel="stylesheet">
+  <link href="../hs.css" rel="stylesheet">
   <link rel="stylesheet" href="../js/task/adminlte.min.css">
+  <link rel="stylesheet" href="../vendor/daterangepicker/daterangepicker.css">
   <link rel="stylesheet" href="../vendor/summernote/summernote-bs4.css">
    
 
@@ -164,9 +165,9 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="homescreen.html">Dashboard</a>
+            <a href="../homescreen.html">Marketing Department Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Marketing Department</li>
+          <li class="breadcrumb-item active"><a href="./menu.html">Task Management</a></li>
           <li class="breadcrumb-item active"><a href="./review_overview.html">Reviewing Tasks</a></li>
             <li class="breadcrumb-item active">Review Task</li>
         </ol>
@@ -178,7 +179,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <a href="./review_overview.html" class="btn btn-primary btn-block mb-3">Return</a>
+            <a href="./tm_overview.html" class="btn btn-primary btn-block mb-3">Return to Task Management</a>
             <!-- /.card -->
             <div class="card">
               <div class="card-header">
@@ -386,26 +387,7 @@
     </div>
   </div>
 
-  <script src="js/Chart.min.js"></script>
 
-<script type="text/javascript">
-  //doughnut
-  var ctxD = document.getElementById("doughnutChart").getContext('2d');
-  var myLineChart = new Chart(ctxD, {
-    type: 'doughnut',
-    data: {
-    labels: ["Danger", "Done", "Todo", "Doing"],
-    datasets: [{
-    data: [40, 300, 100, 50],
-    backgroundColor: ["#d9534f", "#5cb85c", "#ffff00", "#428bca"],
-    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
-    }]
-    },
-    options: {
-      responsive: true
-    }
-  });
-</script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
@@ -424,13 +406,54 @@
   <script src="../vendor/summernote/summernote-bs4.min.js"></script>
   <script src="../js/task/demo.js"></script>
   <script src="../js/task/adminlte.min.js"></script>
+  <script src="../vendor/daterangepicker/daterangepicker.js"></script>
+  <script src="../vendor/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+  <script src="../vendor/moment/moment.min.js"></script>
    <script>
 $(function () {
     //Add text editor
     $('#compose-textarea').summernote()
   });
-$('#sandbox-container .input-daterange').datepicker({
-    });
+//Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' });
+    //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' });
+    //Money Euro
+    $('[data-mask]').inputmask();
+
+    //Date range picker
+    $('#reservation').daterangepicker()
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({
+      timePicker: true,
+      timePickerIncrement: 30,
+      locale: {
+        format: 'MM/DD/YYYY hh:mm A'
+      }
+    })
+    //Date range as a button
+    $('#daterange-btn').daterangepicker(
+      {
+        ranges   : {
+          'Today'       : [moment(), moment()],
+          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        startDate: moment().subtract(29, 'days'),
+        endDate  : moment()
+      },
+      function (start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+      }
+    )
+
+    //Timepicker
+    $('#timepicker').datetimepicker({
+      format: 'LT'
+    })
 </script>
 
 </body>
