@@ -26,17 +26,17 @@
 <!-- Bootstrap core CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-  <style type="text/css">
-    .checked {
-      color: orange;
-    }
-  </style>
+	<style type="text/css">
+		.checked {
+			color: orange;
+		}
+	</style>
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
@@ -172,42 +172,198 @@
           <li class="breadcrumb-item">
             <a href="#">Phòng Marketing</a>
           </li>
-          <li class="breadcrumb-item active">Công việc nhân viên</li>
+          <li class="breadcrumb-item">
+            <a href="kpi_list.html">KPI Nhân viên</a>
+          </li>
+          <li class="breadcrumb-item active">Nguyễn Văn A</li>
         </ol>
 
-        <a href="add_employee_kpi.html" class="btn btn-success" role="button" aria-pressed="true">Giao chỉ tiêu cho nhân viên</a>
-
         <!-- Icon Cards-->
-        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-          <thead>
-            <tr>
-              <th>STT</th>
-              <th>Tên phiếu</th>
-              <th>Tên KPI áp dụng</th>
-              <th>Ngày bắt đầu</th>
-              <th>Ngày kết thúc</th>
-              <th>Trạng thái</th>
-              <th>Ngày tạo</th>
-              <th>Người tạo</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>5000 marketing contacts</td>
-              <td>Description</td>
-              <td>16/09/2019</td>
-              <td>16/12/2019</td>
-              <td>Done</td>
-              <td>15/09/2019</td>
-              <td>Nguyen Van A</td>
-              <td>
-                <a href="add_employee_kpi.html"><i class="fas fa-edit"></i></a>
-              </td>
-            </tr>
-          </tbody>
-        </table>        
+        
+
+
+        <h2>KPI Nhan vien Nguyen Van A</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Trạng thái</h3>
+            <table class="table" id="table-list2">
+              <thead class="thead-dark">
+                <tr>
+                  <!-- <th scope="col">Vị trí</th> -->
+                  <!-- <th scope="col">Tên chỉ tiêu</th> -->
+                  <th colspan="2" style="background-color: green">Hoàn thành chỉ tiêu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Tên tiêu chí
+                  </td>
+                  <td>
+                    Còn thiếu/ Vượt
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Doanh thu
+                  </td>
+                  <td>
+                    +50.000
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Số khách hàng tạo mới
+                  </td>
+                  <td>
+                    +2
+                  </td>
+                </tr>
+              </tbody>
+            </table> 
+          </div>
+
+
+          <div class="col-md-8">
+            <h2>Chi tiết</h2>
+            <table class="table" id="table-list2">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Tên tiêu chí</th>
+                  <!-- <th scope="col">Tên chỉ tiêu</th> -->
+                  <th scope="col">Mục tiêu</th>
+                  <th scope="col">Thực tế</th>
+                  <th scope="col">Kết quả</th>
+                  <th scope="col">Độ quan trọng</th>
+                  <th scope="col">Điểm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Doanh thu
+                  </td>
+                  <td>
+                    100.000.000
+                  </td>
+                  <td>
+                    150.000.000
+                  </td>
+                  <td style="color: green; font-weight: 700">
+                    150%
+                  </td>
+                  <td>
+                    70 x <span style="color: green; font-weight: 700">1.2</span>
+                  </td>
+                  <td>
+                    84
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Số khách hàng tạo mới
+                  </td>
+                  <td>
+                    10
+                  </td>
+                  <td>
+                    12
+                  </td>
+                  <td style="color: green; font-weight: 700">
+                    120%
+                  </td>
+                  <td>
+                    20 x <span style="color: green; font-weight: 700">1</span>
+                  </td>
+                  <td>
+                    20
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Chuyên cần
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    11
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Khen thưởng, kỷ luật
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    -3
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Hệ số điều chỉnh vị trí
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    x1
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Điểm KPI
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    112
+                  </td>
+                </tr>
+              </tbody>
+            </table> 
+          </div>
+        </div>
+
       
       </div>
       <!-- /.container-fluid -->
