@@ -16,9 +16,11 @@
 
   <!-- Page level plugin CSS-->
   <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="../js/task/adminlte.min.css">
+  <link rel="stylesheet" href="../vendor/summernote/summernote-bs4.css">
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
+  
   <link href="../hs.css" rel="stylesheet">
 
 </head>
@@ -229,7 +231,7 @@
         <div class="col-md-9">
           <div class="card card-primary card-outline">
             <div class="card-header">
-              <h3 class="card-title">Reviewing Tasks</h3>
+              <h3 class="">Reviewing Tasks</h3>
 
               <div class="card-tools">
                 <div class="input-group input-group-sm">
@@ -249,10 +251,7 @@
                 <!-- Check all button -->
                 <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
                 </button>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
-                  <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
-                </div>
+
                 <!-- /.btn-group -->
                 <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
                 <div class="float-right">
@@ -268,7 +267,15 @@
               <div class="table-responsive mailbox-messages">
                 <table class="table table-hover table-striped">
                   <tbody>
-                  <tr >
+                  <tr>
+                    <td></td>
+                    <td class="mailbox-star">Mark </td>
+                    <td class="mailbox-name">Name</td>
+                    <td class="mailbox-subject">Tasks</td>
+                    <td class="mailbox-attachment"></td>
+                    <td class="mailbox-date">Time </td>
+                  </tr>                  
+                   <tr >
                     <td>
                       <div class="icheck-primary">
                         <input type="checkbox" value="" id="check1">
@@ -481,43 +488,56 @@
 
   <script src="../js/Chart.min.js"></script>
 
-<script type="text/javascript">
-  //doughnut
-  var ctxD = document.getElementById("doughnutChart").getContext('2d');
-  var myLineChart = new Chart(ctxD, {
-    type: 'doughnut',
-    data: {
-    labels: ["Danger", "Done", "Todo", "Doing"],
-    datasets: [{
-    data: [40, 300, 100, 50],
-    backgroundColor: ["#d9534f", "#5cb85c", "#ffff00", "#428bca"],
-    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
-    }]
-    },
-    options: {
-      responsive: true
-    }
-  });
+<script>
+    $(function () {
+    //Enable check and uncheck all functionality
+    $('.checkbox-toggle').click(function () {
+      var clicks = $(this).data('clicks')
+      if (clicks) {
+        //Uncheck all checkboxes
+        $('.mailbox-messages input[type=\'checkbox\']').prop('checked', false)
+        $('.checkbox-toggle .far.fa-check-square').removeClass('fa-check-square').addClass('fa-square')
+      } else {
+        //Check all checkboxes
+        $('.mailbox-messages input[type=\'checkbox\']').prop('checked', true)
+        $('.checkbox-toggle .far.fa-square').removeClass('fa-square').addClass('fa-check-square')
+      }
+      $(this).data('clicks', !clicks)
+    })
+
+    //Handle starring for glyphicon and font awesome
+    $('.mailbox-star').click(function (e) {
+      e.preventDefault()
+      //detect type
+      var $this = $(this).find('a > i')
+      var glyph = $this.hasClass('glyphicon')
+      var fa    = $this.hasClass('fa')
+
+      //Switch states
+      if (glyph) {
+        $this.toggleClass('glyphicon-star')
+        $this.toggleClass('glyphicon-star-empty')
+      }
+
+      if (fa) {
+        $this.toggleClass('fa-star')
+        $this.toggleClass('fa-star-o')
+      }
+    })
+  })
 </script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Page level plugin JavaScript-->
-  <script src="../vendor/chart.js/Chart.min.js"></script>
-  <script src="../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="../js/sb-admin.min.js"></script>
-
-  <!-- Demo scripts for this page-->
-  <script src="../js/demo/datatables-demo.js"></script>
-  <script src="../js/demo/chart-area-demo.js"></script>
+   
+  <script src="../js/task/demo.js"></script>
+   
 
 </body>
 

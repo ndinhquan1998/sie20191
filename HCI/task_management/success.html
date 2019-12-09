@@ -16,12 +16,10 @@
 
   <!-- Page level plugin CSS-->
   <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
- 
+
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
-   
-  <link href="hs.css" rel="stylesheet">
-  <link rel="stylesheet" href="../js/task/adminlte.min.css">
+  <link href="../hs.css" rel="stylesheet">
 
 </head>
 
@@ -121,9 +119,9 @@
           <span>Task Management</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="tm_overview.html">Task Overview</a>
-          <a class="dropdown-item" href="tm_overview.html">Reviewing Tasks</a>
-          <a class="dropdown-item" href="tm_overview.html">Task Requesting</a>
+          <a class="dropdown-item" href="../task_overview/task_overview.html">Task Overview</a>
+          <a class="dropdown-item" href="./tm_overview.html">Department Tasks</a>
+          <a class="dropdown-item" href="./tm_overview.html">Reviewing Tasks</a>
         </div>
       </li>       
        <li class="nav-item dropdown">
@@ -162,156 +160,29 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="homescreen.html">Dashboard</a>
+            <a href="../homescreen.html">Marketing Department Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Marketing Department</li>
-          <li class="breadcrumb-item active"><a href="./tm_overview.html">Tasks Overview</a></li>
-            <li class="breadcrumb-item active"> <a href="./view_task.html">View Task</a></li>
-            <li class="breadcrumb-item active">View Timeline</li>
+          <li class="breadcrumb-item active"><a href="./menu.html">Task Management</a></li>
+            <li class="breadcrumb-item active">Reviewing Tasks</li>
         </ol>
 
         
         </div>
                 <!-- Main content -->
-        <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3">
-            <a href="view_task.html" class="btn btn-primary btn-block mb-3">Return</a>            
-            <!-- /.card -->
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Labels</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                <ul class="nav nav-pills flex-column">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="far fa-circle text-danger"></i> Important</a>
-                  </li>
-
-                </ul>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        <div class="col-md-9">
-    <section class="content">
-      <div class="container-fluid">
+        <div style="margin: 250px" class="row ">
+        <div style="margin: 100px" align="center" class="col ">
+            SUCCESS
+             
+            <a href="review_overview.html" class="btn btn-primary btn-block mb-3" style="margin-top: 50px">Return</a>
+            
         
-        <!-- Timelime example  -->
-        <div class="row">
-          <div class="col-md-12">
-            <!-- The time line -->
-            <div class="timeline">
-              <!-- timeline time label -->
-              <div class="time-label">
-                <span class="bg-red">10 Feb. 2019</span>
-              </div>
-              <!-- /.timeline-label -->
-              <!-- timeline item -->
-              <div>
-                <i class="fas fa-envelope bg-blue"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 2 days ago </span>
-                  <h3 class="timeline-header"><a href="#">Design Leader</a> assigned a task for you</h3>
-
-                  <div class="timeline-body">
-                    Thiết kế POSM là viết tắt của cụm từ Point Of Sales Material. Nó được hiểu như là một vật liệu quảng cáo, hỗ trợ cho công việc bán hàng, thiết kế profile thường được bố trí ở các siêu thị, cửa hàng…
-                  </div>
-                  <div class="timeline-footer">
-                    <a class="btn btn-primary btn-sm" href="view_task.html">Read more</a>
-                  </div>
-                </div>
-              </div>
-              <!-- END timeline item -->
-              <!-- timeline item -->
-              <div>
-                <i class="fas fa-user bg-green"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 2 days ago </span>
-                  <h3 class="timeline-header no-border"><a href="#">You</a> moved task from Todo to In Progess</h3>
-                </div>
-              </div>
-                            <div>
-                <i class="fa fa-camera bg-purple"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 10:15 AM </span>
-                  <h3 class="timeline-header"><a href="#">You</a> uploaded new photos</h3>
-                  <div class="timeline-body">
-                    <img src="http://placehold.it/150x100" alt="...">
-                    <img src="http://placehold.it/150x100" alt="...">
-                    <img src="http://placehold.it/150x100" alt="...">
-                    <img src="http://placehold.it/150x100" alt="...">
-                    <img src="http://placehold.it/150x100" alt="...">
-                  </div>
-                </div>
-              </div>
-                            <div>
-                <i class="fas fa-user bg-green"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 10:15 AM </span>
-                  <h3 class="timeline-header no-border"><a href="#">You</a> Submitted Task. Waiting for review...</h3>
-                </div>
-              </div>
-              <!-- END timeline item -->
-              <!-- timeline item -->
-
-              <!-- END timeline item -->
-              <!-- timeline time label -->
-              <div class="time-label">
-                <span class="bg-green">11 Feb. 2019</span>
-              </div>
-              <!-- /.timeline-label -->
-              <!-- timeline item -->
-                            <div>
-                <i class="fas fa-comments bg-yellow"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span>
-                  <h3 class="timeline-header"><a href="#">Reviewer 1</a> reviewed on your post</h3>
-                  <div class="timeline-body">
-                    <p>Very Good Observation !</p>                      
-                  </div>
-                  <div class="timeline-footer">
-                    <a class="btn btn-primary btn-sm">View detail</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- END timeline item -->
-
-              <div>
-                <i class="fas fa-clock bg-gray"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span>
-                  <h3 class="timeline-header"><a href="#">Leader</a> ended Tasks. System evaluating points</h3>
- 
- 
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.col -->
+        </div>        
+           
+         
         </div>
-      </div>
-      <!-- /.timeline -->
-
-    </section>
- 
+        
+        
         </div>
-        <!-- /.col -->
-      </div>
-          <!-- /.row -->
-          </div>
-    </section>
-    </div>
         </div>
 
   <!-- Scroll to Top Button-->
@@ -338,7 +209,7 @@
     </div>
   </div>
 
-  <script src="js/Chart.min.js"></script>
+  <script src="../js/Chart.min.js"></script>
 
 <script type="text/javascript">
   //doughnut
@@ -362,14 +233,21 @@
   <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
- 
+
+  <!-- Core plugin JavaScript-->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Page level plugin JavaScript-->
+  <script src="../vendor/chart.js/Chart.min.js"></script>
+  <script src="../vendor/datatables/jquery.dataTables.js"></script>
+  <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="../js/sb-admin.min.js"></script>
- 
-  <script src="../js/task/demo.js"></script>
-  <script src="../js/task/adminlte.min.js"></script>
- 
+
+  <!-- Demo scripts for this page-->
+  <script src="../js/demo/datatables-demo.js"></script>
+  <script src="../js/demo/chart-area-demo.js"></script>
 
 </body>
 
