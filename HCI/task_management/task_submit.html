@@ -168,8 +168,9 @@
             <a href="../homescreen.html">Marketing Department Dashboard</a>
           </li>
           <li class="breadcrumb-item active"> Task Management </li>
-          <li class="breadcrumb-item active"><a href="./review_overview.html">Reviewing Tasks</a></li>
-            <li class="breadcrumb-item active">Review Task</li>
+          <li class="breadcrumb-item active"><a href="./tm_overview.html">Department Tasks</a></li>
+          <li class="breadcrumb-item active"><a href="./view_task.html">View Task</a></li>
+          <li class="breadcrumb-item active">Submitting Task</li>
         </ol>
 
         
@@ -179,176 +180,46 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <a href="./tm_overview.html" class="btn btn-primary btn-block mb-3">Return to Task Management</a>
+            <a href="./view_task.html" data-toggle="confirm" data-title="Wait!" data-message="Are you sure to discard progress?" data-type="danger" class="btn btn-danger btn-block mb-3">Return</a><a href="./success_tasksubmit.html" data-toggle="confirm" data-message="Are you sure to confirm progress?" data-type="primary" class="btn btn-primary btn-block mb-3">Submit</a>
             <!-- /.card -->
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Labels</h3>
-
-                <div class="card-tools">
-
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                <ul class="nav nav-pills flex-column">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="far fa-circle text-danger"></i> Important</a>
-                  </li>
-
-                </ul>
-              </div>
-              <!-- /.card-body -->
-            </div>
+ 
             <!-- /.card -->
           </div>
           <!-- /.col -->
         <div class="col-md-9">
-          <div class="card card-primary card-outline sidebar-collapse " >
-            <div class="card-header" data-card-widget="collapse">
-              <h3 class="card-title ">View Tasks</h3>
- 
-            <button type="button" class="btn btn-tool " data-card-widget="toggle"><i class="fas fa-minus float-right" ></i>
-                  </button>
-            </div>
-             
-            <!-- /.card-header -->
-            <div class="card-body p-0">
-              <div class="mailbox-read-info">
-                <h5>Task Title Is Placed Here</h5>
-                <h6>From: Head Department
-                  <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span></h6>
-              </div>
-              <!-- /.mailbox-read-info -->
-              <div class="mailbox-controls with-border text-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Delete">
-                    <i class="far fa-trash-alt"></i></button>
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Reply">
-                    <i class="fas fa-reply"></i></button>
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Forward">
-                    <i class="fas fa-share"></i></button>
-                </div>
-                <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Print">
-                  <i class="fas fa-print"></i></button>
-
-              </div>
-              <!-- /.mailbox-controls -->
-              <div class="mailbox-read-message">
-                <p>Hello John,</p>
-
-                <p>Thiết kế POSM là viết tắt của cụm từ Point Of Sales Material. Nó được hiểu như là một vật liệu quảng cáo, hỗ trợ cho công việc bán hàng, thiết kế profile thường được bố trí ở các siêu thị, cửa hàng…để giúp hỗ trợ chiến lược marketing và giúp quảng bá thương hiệu. POSM thường là những kệ bán hàng, booth bán hàng, standee, hoặc poster…. Đây là những thiết kế thường mang nét đặc trừng của sản phẩm và mang dấu ấn, hình ảnh của thương hiệu.</p>
-
-                <p>Có hai cách để lấy được sự quan tâm sử dụng của khách hàng:
-
-                Thứ nhất chính là thu hút sự quan tâm thiết kế bao bì của khách hàng ngay tại điểm mua bán, thuyết phục khách hàng quyết định mua hàng tại chỗ. Thứ hai đó chính là thông qua việc khách hàng sử dụng sản phẩm thử, cảm thấy hài lòng và quay lại với sản phẩm. Trong hai cách này thì POSM công ty thiết kế catalogue chuyên nghiệp đóng vai trò rất quan trọng trong việc làm nên sự thành công của cách thứ nhất. Lý do là bởi vì POSM có nhiệm vụ là thu hút sự chú ý của khách hàng, tôn vinh giá trị sản phẩm và hỗ trợ chiến dịch quảng cáo sản phẩm đó, thiet ke brochure  mang hình ảnh của thương hiệu đến gần hơn với khách hàng, thông tin, thuyết phục khách hàng qua nội dung mà nó truyền tải. Vì thế, thiết kế poster thiết kế POSM cũng đòi hỏi sự thẩm mỹ cao và nội dung cũng thư thiết kế tốt. Bên trên là các thông tin cơ bản về thiết kế POSM. Chúc các bạn thành công với thiết kế của mình.</p>
- 
-
-                <p>Thanks,<br>Jane</p>
-              </div>
-              <!-- /.mailbox-read-message -->
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer bg-white">
-              <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
-                <li>
-                  <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
-
-                  <div class="mailbox-attachment-info">
-                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> Sep2014-report.pdf</a>
-                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span>1,245 KB</span>
-                          <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                        </span>
-                  </div>
-                </li>
-                <li>
-                  <span class="mailbox-attachment-icon"><i class="far fa-file-word"></i></span>
-
-                  <div class="mailbox-attachment-info">
-                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> App Description.docx</a>
-                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span>1,245 KB</span>
-                          <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                        </span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!-- /.card-footer -->
-            <div class="card-footer">
-             <div class="float-left">
-                <button type="button" class="btn btn-default"><i class="fas fa-print"></i> Print</button>
-                <button type="button" class="btn btn-default"><i class="fas fa-reply"></i> Reply</button>
-             </div>
-
-            </div>
-             
-            <!-- /.card-footer -->
-          </div>
+          
           <!-- /.card -->
                     <div class="">
             <div class="card card-primary card-outline">
               <div class="card-header" data-card-widget="collapse">
-                <h3 class="card-title">Review</h3>
+                <h3 class="card-title">Submit Task</h3>
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus float-right"></i>
                   </button>
               </div>
               <!-- /.card-header -->
               
               <div class="card-body">
-                        <h4>Task Evaluation:</h4>
-                 		<div class="row ">
-			<div class="col">
-				<div class="rating-block">
-					<h4>KPI System Rating</h4>
-					<h2 class="bold padding-bottom-7">4 <small>/ 5</small></h2>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
- 
-				</div>
-			</div>
-				<div class="col">
-				<div class="rating-block">
-					<h4>Reviewer Rating</h4>
-					<h2 class="bold padding-bottom-7">4 <small>/ 5</small></h2>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-				</div>
-			</div>
-
-		</div>			
+                <div class="form-group">
+                    <textarea id="compose-textarea" class="form-control" style="height: 300px">
+                      <h1><u>Heading Of Review</u></h1>
+                      <h4>Subheading</h4>
+                      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain e</p>
+                      <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                        <li>List item four</li>
+                      </ul>
+                      <p>Thank you,</p>
+                      <p>John Doe</p>
+                    </textarea>
+                </div>
+                <h4>Task goals:</h4>
+ 		
         <div class="row">
           <div class="col">
               <div class="rating-block">
-                <h4>Goal : Place Custom Goal's title Here</h4>
+                <h4>Goal : Place Title here</h4>
                         				<div class="pull-left">
 					<div class="pull-left" style="line-height:1;">
 						<div style="height:9px; margin:5px 0;">Excellent <span class="glyphicon glyphicon-star"></span></div>
@@ -415,92 +286,26 @@
 					<div class="pull-right" style="margin-left:10px;">0</div>
 				</div>
  <hr>
-           <h4>Work Acceptance:</h4>
-                  <div align="center">
-                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> Sep2014-report.pdf <span class="mailbox-attachment-size clearfix mt-1">
-                           1,245 KB </span></a>
-                        
+                 <div align="center" class="form-group">
+                  <div class="btn btn-default btn-file">
+                    <i class="fas fa-paperclip"></i> Attachment
+                    <input type="file" name="attachment">
                   </div>
-                   <hr>
-                    <div align="center" class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                          <label for="customCheckbox1" class="custom-control-label">Verified Goal</label>
-                        </div>
-                        <hr>
+                  <p class="help-block">Max. 32MB</p>
+                </div>
             </div>
             
           </div>
            
 			</div>
-			<br>			
-		<div class="row">
-			<div class="col">
-				
-				<div class="review-block">
-					<div class="row">
-
-						<div class="col">
-											<h4>KPI System Rating</h4>
-					<h2 class="bold padding-bottom-7">3 <small>/ 5</small></h2>
-							<div class="review-block-rate">
-								<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-								<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-								<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-								<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-								<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-							</div><hr>
-							<div class="review-block-title"><h4>Goal: Task Timing Submit</h4></div>
-							<div class="review-block-description"> On time <br>
-							Date Submitted: HH/MM DD/MM/YYYY
-							</div>
-						</div>
-					</div>
-					 
  
- 
-				</div>
-			</div>
-		</div>
-                <hr>
                  
-<h4>Additional Review:</h4>
-                <div class="form-group">
-                    <textarea id="compose-textarea" class="form-control" style="height: 300px">
-                      <h1><u>Heading Of Review</u></h1>
-                      <h4>Subheading</h4>
-                      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain e</p>
-                      <ul>
-                        <li>List item one</li>
-                        <li>List item two</li>
-                        <li>List item three</li>
-                        <li>List item four</li>
-                      </ul>
-                      <p>Thank you,</p>
-                      <p>John Doe</p>
-                    </textarea>
-                </div>
+
 
               </div>
               <!-- /.card-body -->
  
-              <div align="center"  class="">
-                <hr>
-                <button type="button" class="btn btn-default"><i class="fas"></i> Submit</button>
-                <hr>
-                <a href="../task_management/success.html" data-toggle="confirm" data-title="Wait!" data-message="Are you sure?" data-type="primary" class="btn btn-primary">
-                    Confirm link
-                </a>
-              </div>
+
               <!-- /.card-footer -->
             </div>
             <!-- /.card -->
