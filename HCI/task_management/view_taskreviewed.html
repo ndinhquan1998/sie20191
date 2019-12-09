@@ -20,9 +20,9 @@
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
    
-  <link href="hs.css" rel="stylesheet">
+  <link href="../hs.css" rel="stylesheet">
   <link rel="stylesheet" href="../js/task/adminlte.min.css">
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.6/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 
 <body id="page-top">
@@ -165,8 +165,8 @@
             <a href="../homescreen.html">Marketing Department Dashboard</a>
           </li>
           <li class="breadcrumb-item active"> Task Management </li>
-           <li class="breadcrumb-item active"><a href="./tm_overview.html">Department Task</a></li>
-            <li class="breadcrumb-item active">View Task</li>
+          <li class="breadcrumb-item active"><a href="./tm_overview.html">Department Tasks</a> </li>
+            <li class="breadcrumb-item active">View Task Completed</li>
         </ol>
 
         
@@ -177,9 +177,9 @@
         <div class="row">
           <div class="col-md-3">
             <a href="tm_overview.html" class="btn btn-primary btn-block mb-3">Return</a>
+            <a href="view_taskreviewed_detailassign.html" class="btn btn-primary btn-block mb-3">View Detail Assigned Task</a>
+            <a href="view_taskreviewed_detailsubmitted.html" class="btn btn-primary btn-block mb-3">View Detail Submitted Task</a>
             <a href="timeline.html" class="btn btn-primary btn-block mb-3">View Detail Timeline</a>
-            <a href="request_changedeadline.html" class="btn btn-primary btn-block mb-3">Request changing deadline</a>
-            <a href="task_submitting.html" class="btn btn-primary btn-block mb-3">Submitting Task</a>
             <!-- /.card -->
             <div class="card">
               <div class="card-header">
@@ -205,80 +205,198 @@
           </div>
           <!-- /.col -->
         <div class="col-md-9">
-          <div class="card card-primary card-outline">
-            <div class="card-header">
-              <h3 class="card-title">View Tasks</h3>
 
-              <div class="card-tools">
-                <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Previous"><i class="fas fa-chevron-left"></i></a>
-                <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Next"><i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body p-0">
-              <div class="mailbox-read-info">
-                <h5>Task Title Is Placed Here</h5>
-                <h6>From: Head Department
-                  <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span></h6>
-              </div>
-              <!-- /.mailbox-read-info -->
-              <div class="mailbox-controls with-border text-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Delete">
-                    <i class="far fa-trash-alt"></i></button>
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Reply">
-                    <i class="fas fa-reply"></i></button>
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Forward">
-                    <i class="fas fa-share"></i></button>
-                </div>
-                <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Print">
-                  <i class="fas fa-print"></i></button>
-              </div>
-              <!-- /.mailbox-controls -->
-              <div class="mailbox-read-message">
-                <p>Hello John,</p>
-
-                <p>Thiết kế POSM là viết tắt của cụm từ Point Of Sales Material. Nó được hiểu như là một vật liệu quảng cáo, hỗ trợ cho công việc bán hàng, thiết kế profile thường được bố trí ở các siêu thị, cửa hàng…để giúp hỗ trợ chiến lược marketing và giúp quảng bá thương hiệu. POSM thường là những kệ bán hàng, booth bán hàng, standee, hoặc poster…. Đây là những thiết kế thường mang nét đặc trừng của sản phẩm và mang dấu ấn, hình ảnh của thương hiệu.</p>
-
-                <p>Có hai cách để lấy được sự quan tâm sử dụng của khách hàng:
-
-                Thứ nhất chính là thu hút sự quan tâm thiết kế bao bì của khách hàng ngay tại điểm mua bán, thuyết phục khách hàng quyết định mua hàng tại chỗ. Thứ hai đó chính là thông qua việc khách hàng sử dụng sản phẩm thử, cảm thấy hài lòng và quay lại với sản phẩm. Trong hai cách này thì POSM công ty thiết kế catalogue chuyên nghiệp đóng vai trò rất quan trọng trong việc làm nên sự thành công của cách thứ nhất. Lý do là bởi vì POSM có nhiệm vụ là thu hút sự chú ý của khách hàng, tôn vinh giá trị sản phẩm và hỗ trợ chiến dịch quảng cáo sản phẩm đó, thiet ke brochure  mang hình ảnh của thương hiệu đến gần hơn với khách hàng, thông tin, thuyết phục khách hàng qua nội dung mà nó truyền tải. Vì thế, thiết kế poster thiết kế POSM cũng đòi hỏi sự thẩm mỹ cao và nội dung cũng thư thiết kế tốt. Bên trên là các thông tin cơ bản về thiết kế POSM. Chúc các bạn thành công với thiết kế của mình.</p>
- 
-
-                <p>Thanks,<br>Jane</p>
-              </div>
-              <!-- /.mailbox-read-message -->
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer bg-white">
-              <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
-
-                <li>
-                  <span class="mailbox-attachment-icon"><i class="far fa-file-word"></i></span>
-
-                  <div class="mailbox-attachment-info">
-                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> POSM Description.docx</a>
-                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span>1,245 KB</span>
-                          <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                        </span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!-- /.card-footer -->
-            <div class="card-footer">
-              <div class="float-right">
-                <button type="button" class="btn btn-default"><i class="fas fa-reply"></i> Reply</button>
-
-                <button type="button" class="btn btn-default"><i class="fas"></i> Submit</button>
-              </div>
-              <button type="button" class="btn btn-default"><i class="fas fa-print"></i> Print</button>
-            </div>
-            <!-- /.card-footer -->
-          </div>
           <!-- /.card -->
+                    <div class="">
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">Review</h3>
+ 
+              </div>
+              <!-- /.card-header -->
+              
+              <div class="card-body">
+                        <h4>Task Evaluation:</h4>
+                 		<div class="row ">
+			<div class="col">
+				<div class="rating-block">
+					<h4>KPI System Rating</h4>
+					<h2 class="bold padding-bottom-7">4 <small>/ 5</small></h2>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+ 
+				</div>
+			</div>
+				<div class="col">
+				<div class="rating-block">
+					<h4>Reviewer Rating</h4>
+					<h2 class="bold padding-bottom-7">4 <small>/ 5</small></h2>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+
+		</div>			
+        <div class="row">
+          <div class="col">
+              <div class="rating-block">
+                <h4>Goal :</h4>
+                        				<div class="pull-left">
+					<div class="pull-left" style="line-height:1;">
+						<div style="height:9px; margin:5px 0;">Excellent <span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style="">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 100%">
+							<span class="sr-only">80% Complete (danger)</span>
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;">1</div>
+				</div>
+				<div class="pull-left">
+					<div class="pull-left" style="  line-height:1;">
+						<div style="height:9px; margin:5px 0;">Very Good <span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style=" ">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
+							<span class="sr-only">80% Complete (danger)</span>
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;">1</div>
+				</div>
+				<div class="pull-left">
+					<div class="pull-left" style="line-height:1;">
+						<div style="height:9px; margin:5px 0;">Completed Goal<span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style=" ">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
+							<span class="sr-only">80% Complete (danger)</span>
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;">0</div>
+				</div>
+				<div class="pull-left">
+					<div class="pull-left" style="line-height:1;">
+						<div style="height:9px; margin:5px 0;">Need Improvement <span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style=" ">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%">
+							 
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;">0</div>
+				</div>
+				<div class="pull-left">
+					<div class="pull-left" style=" line-height:1;">
+						<div style="height:9px; margin:5px 0;">Failed <span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style=" ">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5" style="width: 20%">
+							 
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;">0</div>
+				</div>
+ <hr>
+           <h4>Work Acceptance:</h4>
+                  <div align="center">
+                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> Sep2014-report.pdf <span class="mailbox-attachment-size clearfix mt-1">
+                           1,245 KB </span></a>
+                        
+                  </div>
+                   
+                    <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox1" checked disabled>
+                          <label for="customCheckbox1" class="custom-control-label">Verified Goal</label>
+                        </div>
+            </div>
+            
+          </div>
+           
+			</div>
+			<br>			
+		<div class="row">
+			<div class="col">
+				
+				<div class="review-block">
+					<div class="row">
+
+						<div class="col">
+											<h4>KPI System Rating</h4>
+					<h2 class="bold padding-bottom-7">3 <small>/ 5</small></h2>
+							<div class="review-block-rate">
+								<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</button>
+								<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</button>
+								<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</button>
+								<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</button>
+								<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</button>
+							</div><hr>
+							<div class="review-block-title"><h4>Task Timing Submit</h4></div>
+							<div class="review-block-description"> On time <br>
+							Date Submitted: HH/MM DD/MM/YYYY
+							</div>
+						</div>
+					</div>
+					 
+ 
+ 
+				</div>
+			</div>
+		</div>
+
+
+              </div>
+              <!-- /.card-body -->
+
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
         </div>
         <!-- /.col -->
       </div>
@@ -312,44 +430,26 @@
     </div>
   </div>
 
-  <script src="js/Chart.min.js"></script>
+  
 
-<script type="text/javascript">
-  //doughnut
-  var ctxD = document.getElementById("doughnutChart").getContext('2d');
-  var myLineChart = new Chart(ctxD, {
-    type: 'doughnut',
-    data: {
-    labels: ["Danger", "Done", "Todo", "Doing"],
-    datasets: [{
-    data: [40, 300, 100, 50],
-    backgroundColor: ["#d9534f", "#5cb85c", "#ffff00", "#428bca"],
-    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
-    }]
-    },
-    options: {
-      responsive: true
-    }
-  });
+<script>
+$(document).ready(function(){
+    $('#input-1').rating({min: 0, max: 5, step: 0.1, stars: 2});
+});
 </script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Page level plugin JavaScript-->
-  <script src="../vendor/chart.js/Chart.min.js"></script>
-  <script src="../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
+ 
 
   <!-- Custom scripts for all pages-->
   <script src="../js/sb-admin.min.js"></script>
-  <script src="../vendor/summernote/summernote-bs4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.6/js/star-rating.min.js" type="text/javascript"></script>
   <script src="../js/task/demo.js"></script>
   <script src="../js/task/adminlte.min.js"></script>
+  <script src="../vendor/bootstrap.confirm.js"></script>
  
 
 </body>

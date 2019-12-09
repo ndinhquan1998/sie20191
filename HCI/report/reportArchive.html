@@ -95,9 +95,9 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">
+        <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="../homescreen.html">
+        <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
@@ -120,8 +120,8 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <a class="dropdown-item" href="../task_overview/task_overview.html">Task Overview</a>
-          <a class="dropdown-item" href="./tm_overview.html">Department Tasks</a>
-          <a class="dropdown-item" href="./tm_overview.html">Reviewing Tasks</a>
+          <a class="dropdown-item" href="../task_management/tm_overview.html">Department Tasks</a>
+          <a class="dropdown-item" href="../task_management/review_overview.html">Reviewing Tasks</a>
         </div>
       </li>       
        <li class="nav-item dropdown">
@@ -131,7 +131,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <a class="dropdown-item" href="rp_overview.html">Report Overview</a>
-          <a class="dropdown-item" href="rp_overview.html">Report Archive</a>
+          <a class="dropdown-item" href="./reportArchive.html">Report Archive</a>
           <a class="dropdown-item" href="rp_overview.html">...</a>
         </div>
       </li>
@@ -162,26 +162,93 @@
           <li class="breadcrumb-item">
             <a href="../homescreen.html">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active"><a href="./menu.html">Report Management</a></li>
+          <li class="breadcrumb-item active">Report Management</li>
             <li class="breadcrumb-item active">Report Archive</li>
         </ol>
 
         
         </div>
                 <!-- Main content -->
-                <section class="content">
+        <section class="content">
+                    <div style="padding:10px" class="row">
+                    <div class="col-md-3">
+          <a href="./createTask.html" class="btn btn-primary btn-block mb-3">Create Task</a>
+          <a href="./review_overview.html" class="btn btn-primary btn-block mb-3">Review Task</a>
 
+          <div class="card">
+<!--            <div class="card-header">
+              <h3 class="card-title">Folders</h3>
+
+
+            </div>-->
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item active">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-file-alt "></i>    In Progress
+                    <span class="badge float-right">12</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-file-alt"></i>     Todo
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-file-alt"></i>     Danger
+                    <span class="badge bg-warning float-right">65</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-inbox"></i>     Done
+                </a>
+                </li>
+ 
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Labels</h3>
+
+ 
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-flag text-danger"></i>
+                    Important
+                  </a>
+                </li>                
+                 <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-flag text-danger"></i>
+                    Created Tasks
+                  </a>
+                </li>                
+                 <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-flag text-danger"></i>
+                    Assigned Tasks
+                  </a>
+                </li>
+ 
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
                         <!-- Default box -->
-                        <div class="card">
+                        <div class="col-md-9">
                           <div class="card-header">
                             <h3 class="card-title">All Report</h3>
-                  
-                            <div class="card-tools">
-                              <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                <i class="fas fa-minus"></i></button>
-                              <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-                                <i class="fas fa-times"></i></button>
-                            </div>
+
                           </div>
                           <div class="card-body p-0">
                             <table class="table table-striped projects">
@@ -213,7 +280,7 @@
                                         </td>
                                         <td>
                                             <a>
-                                                AdminLTE v3
+                                                Employee Y
                                             </a>
                                             <br/>
                                             <small>
@@ -254,16 +321,7 @@
                                                 </i>
                                                 View
                                             </a>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt">
-                                                </i>
-                                                Edit
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Delete
-                                            </a>
+
                                         </td>
                                     </tr>
                                     <tr>
@@ -272,7 +330,7 @@
                                         </td>
                                         <td>
                                             <a>
-                                                AdminLTE v3
+                                                
                                             </a>
                                             <br/>
                                             <small>
@@ -307,16 +365,6 @@
                                                 </i>
                                                 View
                                             </a>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt">
-                                                </i>
-                                                Edit
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Delete
-                                            </a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -325,7 +373,7 @@
                                         </td>
                                         <td>
                                             <a>
-                                                AdminLTE v3
+                                                Employee Y
                                             </a>
                                             <br/>
                                             <small>
@@ -381,7 +429,7 @@
                                         </td>
                                         <td>
                                             <a>
-                                                AdminLTE v3
+                                                Employee X
                                             </a>
                                             <br/>
                                             <small>
@@ -440,7 +488,7 @@
                                         </td>
                                         <td>
                                             <a>
-                                                AdminLTE v3
+                                                Employee X
                                             </a>
                                             <br/>
                                             <small>
@@ -496,7 +544,7 @@
                                         </td>
                                         <td>
                                             <a>
-                                                AdminLTE v3
+                                                Employee X
                                             </a>
                                             <br/>
                                             <small>
@@ -555,7 +603,7 @@
                                         </td>
                                         <td>
                                             <a>
-                                                AdminLTE v3
+                                                Employee X
                                             </a>
                                             <br/>
                                             <small>
@@ -608,7 +656,7 @@
                                         </td>
                                         <td>
                                             <a>
-                                                AdminLTE v3
+                                                Employee X
                                             </a>
                                             <br/>
                                             <small>
@@ -664,7 +712,7 @@
                                         </td>
                                         <td>
                                             <a>
-                                                AdminLTE v3
+                                                Employee X
                                             </a>
                                             <br/>
                                             <small>
@@ -723,8 +771,8 @@
                           <!-- /.card-body -->
                         </div>
                         <!-- /.card -->
-                  
-                      </section>
+                    </div>
+        </section>
     </div>
 </div>
 
