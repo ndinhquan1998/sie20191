@@ -20,6 +20,7 @@
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
   <link href="../hs.css" rel="stylesheet">
+  <link rel="stylesheet" href="../js/task/adminlte.min.css">
   <link rel="stylesheet" href="../vendor/summernote/summernote-bs4.css">
    
 </head>
@@ -175,7 +176,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <a href="./tm_overview.html" class="btn btn-primary btn-block mb-3">Return</a>
+            <a href="./tm_overview.html" data-toggle="confirm" data-title="Wait!" data-message="Are you sure to discard progress?" data-type="danger" class="btn btn-danger btn-block mb-3">Return</a>
+            <a href="../task_management/success_tasksubmit.html" data-toggle="confirm" data-title="Wait!" data-message="Are you sure?" data-type="primary" class="btn btn-primary btn-block mb-3">Create Task</a>
  
           <!-- /.card -->
           <div class="card">
@@ -202,8 +204,10 @@
           <!-- /.col -->
           <div class="col-md-9">
             <div class="card card-primary card-outline">
-              <div class="card-header">
+              <div class="card-header" data-card-widget="collapse">
                 <h3 class="card-title">Create Task</h3>
+                <button type="button" class="btn btn-tool " data-card-widget="toggle"><i class="fas fa-minus float-right" ></i>
+                  </button>
               </div>
               <!-- /.card-header -->
               
@@ -261,19 +265,117 @@
                   <p class="help-block">Max. 32MB</p>
                 </div>
               </div>
-              <!-- /.card-body -->
-              <div class="card-footer">
-                <div class="float-right">
-                  <button type="button" class="btn btn-default"><i class="fas fa-pencil-alt"></i> Draft</button>
-                  <button type="submit" class="btn btn-primary"><i class="far"></i> Assign</button>
-                </div>
-                <button type="reset" class="btn btn-default"><i class="fas fa-times"></i> Discard</button>
+ 
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+                                <div class="">
+            <div class="card card-primary card-outline">
+              <div class="card-header" data-card-widget="collapse">
+                <h3 class="card-title">Review</h3>
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus float-right"></i>
+                  </button>
               </div>
+              <!-- /.card-header -->
+              
+              <div class="card-body">
+                        <h4>Task Evaluation:</h4>
+			
+        <div class="row">
+          <div class="col">
+              <div class="rating-block">
+                <h4>Goal:<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Place Custom Goal's title Here"> </h4>
+                        				<div class="pull-left">
+					<div class="pull-left" style="line-height:1;">
+						<div style="height:9px; margin:5px 0;">Excellent <span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style="">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 100%">
+							<span class="sr-only">80% Complete (danger)</span>
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;"><input placeholder="Place Custom Goal's here" class="form-control" type="number"></div>
+				</div>
+				<div class="pull-left">
+					<div class="pull-left" style="  line-height:1;">
+						<div style="height:9px; margin:5px 0;">Very Good <span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style=" ">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
+							<span class="sr-only">80% Complete (danger)</span>
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;"><input placeholder="Place Custom Goal's here" class="form-control" type="number"></div>
+				</div>
+				<div class="pull-left">
+					<div class="pull-left" style="line-height:1;">
+						<div style="height:9px; margin:5px 0;">Completed Goal<span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style=" ">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
+							<span class="sr-only">80% Complete (danger)</span>
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;"><input placeholder="Place Custom Goal's here" class="form-control" type="number"></div>
+				</div>
+				<div class="pull-left">
+					<div class="pull-left" style="line-height:1;">
+						<div style="height:9px; margin:5px 0;">Need Improvement <span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style=" ">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%">
+							 
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;"><input placeholder="Place Custom Goal's here" class="form-control" type="number"></div>
+				</div>
+				<div class="pull-left">
+					<div class="pull-left" style=" line-height:1;">
+						<div style="height:9px; margin:5px 0;">Failed <span class="glyphicon glyphicon-star"></span></div>
+					</div>
+					<div class="pull-left" style=" ">
+						<div class="progress" style="height:9px; margin:8px 0;">
+						  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5" style="width: 20%">
+							 
+						  </div>
+						</div>
+					</div>
+					<div class="pull-right" style="margin-left:10px;"><input placeholder="Place Custom Goal's here" class="form-control" type="number"></div>
+				</div>
+ <hr>
+           <h4>Work Acceptance:</h4>
+ 
+                    <div align="center" class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                          <label for="customCheckbox1" class="custom-control-label">Required Attachment files</label>
+                        </div>
+                        <hr>
+            </div>
+            
+          </div>
+           
+			</div>
+
+
+              </div>
+              <!-- /.card-body -->
+ 
+
               <!-- /.card-footer -->
             </div>
             <!-- /.card -->
           </div>
+          </div>
           <!-- /.col -->
+          
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -329,25 +431,16 @@
   <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Page level plugin JavaScript-->
-  <script src="../vendor/chart.js/Chart.min.js"></script>
-  <script src="../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
+ 
 
   <!-- Custom scripts for all pages-->
   <script src="../js/sb-admin.min.js"></script>
-
-  <!-- Demo scripts for this page-->
-  <script src="../js/demo/datatables-demo.js"></script>
-  <script src="../js/demo/chart-area-demo.js"></script>
+  <script src="../vendor/bootstrap.confirm.js"></script>
+ 
   <script src="../vendor/summernote/summernote-bs4.min.js"></script>
   <script src="../js/task/demo.js"></script>
   <script src="../js/task/adminlte.min.js"></script>
-  <script src="../vendor/date/js/bootstrap-datepicker.min.js"></script>
+ 
   <script>
 $(function () {
     //Add text editor
