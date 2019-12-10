@@ -12,16 +12,16 @@
   <title>TM Software</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="../../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="../../css/sb-admin.css" rel="stylesheet">
-  <link href="../../hs.css" rel="stylesheet">
-  <link rel="stylesheet" href="../vendor/summernote/summernote-bs4.css">
+  <link href="../css/sb-admin.css" rel="stylesheet">
+  <link href="../hs.css" rel="stylesheet">
   <link rel="stylesheet" href="../js/task/adminlte.min.css">
+  <link rel="stylesheet" href="../vendor/summernote/summernote-bs4.css">
    
 </head>
 
@@ -164,9 +164,10 @@
           <li class="breadcrumb-item">
             <a href="../homescreen.html">Marketing Department Dashboard</a>
           </li>
-          <li class="breadcrumb-item active"><a href="./menu.html">Task Management</a></li>
-          <li class="breadcrumb-item active"><a href="./tm_overview.html">Tasks Overview</a></li>
-            <li class="breadcrumb-item active">Create Task</li>
+          <li class="breadcrumb-item active"> Task Management </li>
+          <li class="breadcrumb-item active"><a href="./tm_overview.html">Department Tasks</a></li>
+          <li class="breadcrumb-item active"><a href="./view_task.html">View Task</a></li>
+            <li class="breadcrumb-item active">Request Change Deadline</li>
         </ol>
 
         
@@ -176,23 +177,67 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            
+            <a href="./request_changedeadline_approve.html" data-toggle="confirm" data-title="Wait!" data-message="Are you sure to discard progress?" data-type="danger" class="btn btn-danger btn-block mb-3">Return</a>
+            <a href="../task_management/success_tasksubmit.html" data-toggle="confirm" data-title="Wait!" data-message="Are you sure?" data-type="primary" class="btn btn-primary btn-block mb-3">Confirm Request</a>
+ 
+          <!-- /.card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Labels</h3>
+
+ 
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-flag text-danger"></i>
+                    Important
+                  </a>
+                </li>
+ 
+              </ul>
+            </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
           </div>
           <!-- /.col -->
           <div class="col-md-9">
             <div class="card card-primary card-outline">
-
+              <div class="card-header">
+                <h3 class="card-title">Request Change Deadline</h3>
+                 
+              </div>
               <!-- /.card-header -->
               
               <div class="card-body">
- 
-                 
+                                    <span>Choose Deadline</span>
+                <div align="center" class="input-daterange input-group" id="datepicker">
+                    <span>From</span><input type="text" class="input-sm " name="start" />
+                    <span class="input-group-addon">to</span>
+                    <input type="text" class="input-sm" name="end" />
+                </div>
+
+                 <br>
 
                 <div class="form-group">
                     <textarea id="compose-textarea" class="form-control" style="height: 300px">
-                      <h1><u>Heading Of Review</u></h1>
+                      <h1><u>Heading Of Message</u></h1>
                       <h4>Subheading</h4>
-                      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain e</p>
+                      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                        was born and I will give you a complete account of the system, and expound the actual teachings
+                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,
+                        dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know
+                        how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again
+                        is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
+                        but because occasionally circumstances occur in which toil and pain can procure him some great
+                        pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise,
+                        except to obtain some advantage from it? But who has any right to find fault with a man who
+                        chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
+                        produces no resultant pleasure? On the other hand, we denounce with righteous indignation and
+                        dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so
+                        blinded by desire, that they cannot foresee</p>
                       <ul>
                         <li>List item one</li>
                         <li>List item two</li>
@@ -203,17 +248,17 @@
                       <p>John Doe</p>
                     </textarea>
                 </div>
-    
+
  
-
               </div>
-              <!-- /.card-body -->
-
+ 
               <!-- /.card-footer -->
             </div>
             <!-- /.card -->
+ 
           </div>
           <!-- /.col -->
+          
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -269,25 +314,16 @@
   <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Page level plugin JavaScript-->
-  <script src="../vendor/chart.js/Chart.min.js"></script>
-  <script src="../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
+ 
 
   <!-- Custom scripts for all pages-->
   <script src="../js/sb-admin.min.js"></script>
-
-  <!-- Demo scripts for this page-->
-  <script src="../js/demo/datatables-demo.js"></script>
-  <script src="../js/demo/chart-area-demo.js"></script>
+  <script src="../vendor/bootstrap.confirm.js"></script>
+ 
   <script src="../vendor/summernote/summernote-bs4.min.js"></script>
   <script src="../js/task/demo.js"></script>
   <script src="../js/task/adminlte.min.js"></script>
-  <script src="../vendor/date/js/bootstrap-datepicker.min.js"></script>
+ 
   <script>
 $(function () {
     //Add text editor
