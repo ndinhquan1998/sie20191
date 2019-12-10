@@ -165,11 +165,7 @@
           <li class="breadcrumb-item active">Tasks Overview</li>
         </ol>
 
-        <!-- Chart-->
-        <h1>Biểu đồ trạng thái công việc của phòng Marketing</h1>
-        <div align="center">
-          <canvas  id="doughnutChart" style="width: 55%"></canvas>
-        </div>
+        
         <!-- Icon Cards-->
         <div class="row">
           <div class="col-xl-3 col-sm-6 mb-3">
@@ -389,6 +385,12 @@
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
 
+        <!-- Chart-->
+        <h1>Biểu đồ trạng thái công việc của phòng Marketing</h1>
+        <div align="center">
+          <canvas id="barChart"></canvas>
+        </div>
+
 
       </div>
       <!-- /.container-fluid -->
@@ -451,6 +453,43 @@
       responsive: true
     }
   });
+</script>
+
+<script type="text/javascript">
+  //bar
+var ctxB = document.getElementById("barChart").getContext('2d');
+var myBarChart = new Chart(ctxB, {
+    type: 'bar',
+    data: {
+    labels: ["Danger", "Done", "Todo", "Doing"],
+    datasets: [{
+    label: '# of Votes',
+    data: [40, 300, 100, 50],
+      backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(255, 206, 86, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+    ],
+    borderColor: [
+      'rgba(255,99,132,1)',
+      'rgba(75, 192, 192, 1)',
+      'rgba(255, 206, 86, 1)',
+      'rgba(54, 162, 235, 1)'
+    ],
+    borderWidth: 1
+    }]
+  },
+    options: {
+    scales: {
+    yAxes: [{
+    ticks: {
+    beginAtZero: true
+    }
+    }]
+    }
+    }
+    });
 </script>
 
   <!-- Bootstrap core JavaScript-->
