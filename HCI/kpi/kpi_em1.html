@@ -173,216 +173,196 @@
             <a href="../homescreen.html">Phòng Marketing</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="kpi_list.html">Danh sách KPI</a>
+            <a href="kpi_list.html">KPI Nhân viên</a>
           </li>
-          <li class="breadcrumb-item active">Thêm KPI</li>
+          <li class="breadcrumb-item active">Nguyễn Văn B</li>
         </ol>
 
         <!-- Icon Cards-->
-        <form>
-          <div class="row">
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1">Tên KPI</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="add 500 contact">
-            </div>
-            
-            <div class="col-md-6">
-              <label for="marketing">Đơn vị thưởng</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="100.000">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="description">Mô tả</label>
-            <textarea class="form-control" id="descriptionn" rows="3"></textarea>
-          </div>
-        </form>    
-
-        <h1> Danh sách chỉ tiêu </h1>
-        <table class="table" id="table-list">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Tên chỉ tiêu</th>
-              <!-- <th scope="col">Tên chỉ tiêu</th> -->
-              <th scope="col">Mô tả</th>
-              <th scope="col">Độ quan trọng (%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td scope="row">
-                <select class="form-control">
-                  <option value="" disabled selected>Số lượng sản phẩm bán được</option>
-                  <option value="1">Doanh số theo sản phẩm</option>
-                  <option value="2">Doanh thu theo sản phẩm</option>
-                  <option value="3">Số lần đi muộn</option>
-                  <option value="4">Tổng vắng</option>
-                  <option value="5">Số khách hàng mua hàng</option>
-                  <option value="6">Số khách hàng tạo mới</option>
-                  <option value="7">Số khách hàng tương tác</option>
-                  <option value="8">Số khách hàng phụ trách</option>
-                  <option value="9">Tỷ lệ (%) số khách hàng tương tác / số khacsh hàng phụ trách</option>
-                  <option>Tỷ lệ (%) số khách hàng mua hàng / số khách hàng phụ trách</option>
-                </select>
-              </td>
-              <!-- <td>
-                <select class="form-control">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-              </td> -->
-              <td>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mô tả ngắn">
-              </td>
-              <td>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="70">
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-                <td colspan="5" style="text-align: left;">
-                    <button class="btn btn-primary" id="addrow">Thêm chỉ tiêu</button>
-                </td>
-            </tr>
-          </tfoot>
-        </table>
-
-        <h1> Các chỉ tiêu khác </h1>
-        <table class="table" id="table-list1">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Tên chỉ tiêu</th>
-              <!-- <th scope="col">Tên chỉ tiêu</th> -->
-              <th scope="col">Mô tả</th>
-              <th scope="col">Độ quan trọng (%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td scope="row">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tên chỉ tiêu">
-              </td>
-              <!-- <td>
-                <select class="form-control">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-              </td> -->
-              <td>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mô tả ngắn">
-              </td>
-              <td>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="70">
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-                <td colspan="5" style="text-align: left;">
-                    <button class="btn btn-primary" id="addrow1">Thêm chỉ tiêu</button>
-                </td>
-            </tr>
-          </tfoot>
-        </table> 
+        
 
 
-        <h1> Thiết lập KPI</h1>
+        <h2>KPI Nhan vien Nguyen Van B</h2>
         <div class="row">
-          <div class="col-md-8">
-            <h2>Điều chỉnh kết quả cho từng KPI</h2>
+          <div class="col-md-4">
+            <h2>Trạng thái</h2>
             <table class="table" id="table-list2">
               <thead class="thead-dark">
                 <tr>
-                  <th scope="col">Từ (%)</th>
+                  <!-- <th scope="col">Vị trí</th> -->
                   <!-- <th scope="col">Tên chỉ tiêu</th> -->
-                  <th scope="col">Đến (%)</th>
-                  <th scope="col">Giá trị</th>
+                  <th colspan="2" style="background-color: red">Không hoàn thành chỉ tiêu</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td scope="row">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="0">
+                  <td>
+                    Tên tiêu chí
                   </td>
                   <td>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="40">
-                  </td>
-                  <td>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="0">
+                    Còn thiếu/ Vượt
                   </td>
                 </tr>
                 <tr>
-                  <td scope="row">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="41">
+                  <td>
+                    Doanh thu
                   </td>
                   <td>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="60">
-                  </td>
-                  <td>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="0.5">
+                    +50.000
                   </td>
                 </tr>
                 <tr>
-                  <td scope="row">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="61">
+                  <td>
+                    Số khách hàng tạo mới
                   </td>
                   <td>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="80">
-                  </td>
-                  <td>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="1">
+                    +2
                   </td>
                 </tr>
               </tbody>
-              <tfoot>
-                <tr>
-                    <td colspan="5" style="text-align: left;">
-                        <button class="btn btn-primary" id="addrow2">Thêm chỉ tiêu</button>
-                    </td>
-                </tr>
-              </tfoot>
             </table> 
           </div>
 
 
-          <div class="col-md-3">
-            <h2> Điều chỉnh vị trí</h2>
+          <div class="col-md-8">
+            <h2>Chi tiết</h2>
             <table class="table" id="table-list2">
               <thead class="thead-dark">
                 <tr>
-                  <th scope="col">Vị trí</th>
+                  <th scope="col">Tên tiêu chí</th>
                   <!-- <th scope="col">Tên chỉ tiêu</th> -->
-                  <th scope="col">Giá trị</th>
+                  <th scope="col">Mục tiêu</th>
+                  <th scope="col">Thực tế</th>
+                  <th scope="col">Kết quả</th>
+                  <th scope="col">Độ quan trọng</th>
+                  <th scope="col">Điểm</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>
-                    Nhân viên
+                    Doanh thu
                   </td>
                   <td>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" value="1">
+                    100.000.000
+                  </td>
+                  <td>
+                    150.000.000
+                  </td>
+                  <td style="color: red; font-weight: 700">
+                    150%
+                  </td>
+                  <td>
+                    70 x <span style="color: red; font-weight: 700">0</span>
+                  </td>
+                  <td>
+                    0
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    Trưởng phòng
+                    Số khách hàng tạo mới
                   </td>
                   <td>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"  value="1">
+                    10
+                  </td>
+                  <td>
+                    12
+                  </td>
+                  <td style="color: red; font-weight: 700">
+                    120%
+                  </td>
+                  <td>
+                    20 x <span style="color: red; font-weight: 700">0</span>
+                  </td>
+                  <td>
+                    0
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Chuyên cần
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    0
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Khen thưởng, kỷ luật
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    -3
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Hệ số điều chỉnh vị trí
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    x 1
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Điểm KPI
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td style="color: red; font-weight: 700">
+                    0
                   </td>
                 </tr>
               </tbody>
             </table> 
           </div>
         </div>
-
-        <a href="kpi_list.html" class="btn btn-success" role="button" aria-pressed="true">Thêm KPI</a>
 
       
       </div>
