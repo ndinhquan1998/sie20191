@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Công ty CP Dược Phẩm</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="../../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+ 
+  <!-- Custom styles for this template-->
+  <link href="../../css/sb-admin.css" rel="stylesheet">
+   
+  <link href="../../vendor/hs.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../js/task/adminlte.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.6/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="page-top">
+
+	<style type="text/css">
+		.checked {
+			color: orange;
+		}
+	</style>
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="../homescreen.html">Công ty CP Dược Phẩm</a>
+
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navbar Search -->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Tìm Kiếm..." aria-label="Search" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Navbar -->
+    <ul class="navbar-nav ml-auto ml-md-0">
+      <li class="nav-item dropdown no-arrow mx-1">
+        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-bell fa-fw"></i>
+          <span class="badge badge-danger">9+</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown no-arrow mx-1">
+        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-envelope fa-fw"></i>
+          <span class="badge badge-danger">7</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown no-arrow">
+        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user-circle fa-fw"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="#">Activity Log</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+        </div>
+      </li>
+    </ul>
+
+  </nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+       <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="../homescreen.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Quản lý KPI</span>
+        </a>
+        <div style="width: 100%" class="dropdown-menu" aria-labelledby="pagesDropdown">
+                  <a class="dropdown-item" href="../kpi/kpi_list.html">Danh sách KPI</a>
+                  <a class="dropdown-item" href="../kpi/employee_kpi.html">List of KPI for employees</a>
+                  <a class="dropdown-item" href="../kpi/dept_kpi.html">List of KPI for Marketing department</a>
+                  <a class="dropdown-item" href="../kpi/kpi_em.html">Personal KPI (Employee View)</a>
+                  <a class="dropdown-item" href="../kpi/kpi/kpi_dept.html">KPI Phòng Ban</a>
+        </div>
+      </li>      
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Quản Lý Công Việc</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <a class="dropdown-item" href="../task_overview/task_overview.html">Tổng Quan</a>
+          <a class="dropdown-item" href="../task_management/tm_overview.html">Công Việc Phòng Ban</a>
+          <a class="dropdown-item" href="../task_management/review_overview.html">Đánh Giá Công Việc</a>
+        </div>
+      </li>       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Quản Lý Báo Cáo</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <a class="dropdown-item" href="#">Tổng Quan</a>
+          <a class="dropdown-item" href="../report/reportArchive.html">Kho Lưu Trữ Báo Cáo</a>
+          <a class="dropdown-item" href="#">...</a>
+        </div>
+      </li>
+      
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Demo Tác Nhân</span>
+        </a>
+        <div style=" width:100%" class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <a class="dropdown-item" href="../../BGD/homescreen.html">BGĐ</a>
+          <a class="dropdown-item" href="../../TruongPhong/homescreen.html">Trưởng Phòng Marketing</a>
+          <a class="dropdown-item" href="../../homescreen.html">Nhân viên Phòng Marketing</a>
+        </div>
+      </li>       
+
+    </ul>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="../homescreen.html">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active"> Quản Lý Công Việc </li>
+            <li class="breadcrumb-item active"><a href="./tm_overview.html">Công Việc Phòng Ban</a></li>            
+            <li class="breadcrumb-item active">Nội Dung Công Việc</li>
+        </ol>
+
+        
+        </div>
+                <!-- Main content -->
+        <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <a href="tm_overview.html" class="btn btn-primary btn-block mb-3">Quay Trở Lại</a>
+            <a href="view_taskreviewed.html" class="btn btn-primary btn-block mb-3">Xem Chi Tiết Nội Dung Đánh Giá</a>
+            <a href="view_taskreviewed_detailsubmitted.html" class="btn btn-primary btn-block mb-3">Xem Chi Tiết Nội Dung Đã Nộp</a>
+            <a href="timeline.html" class="btn btn-primary btn-block mb-3">Xem Dòng Thời Gian Công Việc</a>
+            <!-- /.card -->
+ 
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        <div class="col-md-9">
+          <div class="card card-primary card-outline sidebar-collapse " >
+            <div class="card-header">
+              <h3 class="card-title ">Chi Tiết Nội Dung Công Việc</h3>
+            </div>
+             
+            <!-- /.card-header -->
+            <div class="card-body p-0">
+              <div class="mailbox-read-info">
+                <h5>Tiêu Đề</h5>
+                <h6>Từ : Trưởng Phòng
+                  <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span></h6>
+              </div>
+              <!-- /.mailbox-read-info -->
+              <div class="mailbox-controls with-border text-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Delete">
+                    <i class="far fa-trash-alt"></i></button>
+                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Reply">
+                    <i class="fas fa-reply"></i></button>
+                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Forward">
+                    <i class="fas fa-share"></i></button>
+                </div>
+                <!-- /.btn-group -->
+                <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Print">
+                  <i class="fas fa-print"></i></button>
+
+              </div>
+              <!-- /.mailbox-controls -->
+              <div class="mailbox-read-message">
+                <p>Chào Thành,</p>
+
+                <p>Thiết kế POSM là viết tắt của cụm từ Point Of Sales Material. Nó được hiểu như là một vật liệu quảng cáo, hỗ trợ cho công việc bán hàng, thiết kế profile thường được bố trí ở các siêu thị, cửa hàng…để giúp hỗ trợ chiến lược marketing và giúp quảng bá thương hiệu. POSM thường là những kệ bán hàng, booth bán hàng, standee, hoặc poster…. Đây là những thiết kế thường mang nét đặc trừng của sản phẩm và mang dấu ấn, hình ảnh của thương hiệu.</p>
+
+                <p>Có hai cách để lấy được sự quan tâm sử dụng của khách hàng:
+
+                Thứ nhất chính là thu hút sự quan tâm thiết kế bao bì của khách hàng ngay tại điểm mua bán, thuyết phục khách hàng quyết định mua hàng tại chỗ. Thứ hai đó chính là thông qua việc khách hàng sử dụng sản phẩm thử, cảm thấy hài lòng và quay lại với sản phẩm. Trong hai cách này thì POSM công ty thiết kế catalogue chuyên nghiệp đóng vai trò rất quan trọng trong việc làm nên sự thành công của cách thứ nhất. Lý do là bởi vì POSM có nhiệm vụ là thu hút sự chú ý của khách hàng, tôn vinh giá trị sản phẩm và hỗ trợ chiến dịch quảng cáo sản phẩm đó, thiet ke brochure  mang hình ảnh của thương hiệu đến gần hơn với khách hàng, thông tin, thuyết phục khách hàng qua nội dung mà nó truyền tải. Vì thế, thiết kế poster thiết kế POSM cũng đòi hỏi sự thẩm mỹ cao và nội dung cũng thư thiết kế tốt. Bên trên là các thông tin cơ bản về thiết kế POSM. Chúc các bạn thành công với thiết kế của mình.</p>
+ 
+
+                <p>Trân Trọng,<br>Lâm</p>
+              </div>
+              <!-- /.mailbox-read-message -->
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer bg-white">
+              <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
+                <li>
+                  <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
+
+                  <div class="mailbox-attachment-info">
+                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> Sep2014-report.pdf</a>
+                        <span class="mailbox-attachment-size clearfix mt-1">
+                          <span>1,245 KB</span>
+                          <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
+                        </span>
+                  </div>
+                </li>
+                <li>
+                  <span class="mailbox-attachment-icon"><i class="far fa-file-word"></i></span>
+
+                  <div class="mailbox-attachment-info">
+                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> App Description.docx</a>
+                        <span class="mailbox-attachment-size clearfix mt-1">
+                          <span>1,245 KB</span>
+                          <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
+                        </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- /.card-footer -->
+            <div class="card-footer">
+             <div class="float-left">
+                <button type="button" class="btn btn-default"><i class="fas fa-print"></i> In Nội Dung</button>
+                <button type="button" class="btn btn-default"><i class="fas fa-reply"></i> Trả Lời</button>
+             </div>
+
+            </div>
+             
+            <!-- /.card-footer -->
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!-- /.col -->
+      </div>
+          <!-- /.row -->
+          </div>
+    </section>
+    </div>
+             <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Website Phòng Ban Marketing Nhóm 4 Lớp VUW-IT15</span>
+          </div>
+        </div>
+      </footer>
+        </div>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+<script>
+$(document).ready(function(){
+    $('#input-1').rating({min: 0, max: 5, step: 0.1, stars: 2});
+});
+</script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+ 
+
+  <!-- Custom scripts for all pages-->
+  <script src="../../js/sb-admin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.6/js/star-rating.min.js" type="text/javascript"></script>
+  <script src="../../js/task/demo.js"></script>
+  <script src="../../js/task/adminlte.min.js"></script>
+  <script src="../../vendor/bootstrap.confirm.js"></script>
+ 
+
+</body>
+
+</html>

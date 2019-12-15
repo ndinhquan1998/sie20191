@@ -12,14 +12,14 @@
   <title>Công ty CP Dược Phẩm</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
-  <link href="hs.css" rel="stylesheet">
+  <link href="../css/sb-admin.css" rel="stylesheet">
+  <link href="../vendor/hs.css" rel="stylesheet">
 
 </head>
 
@@ -95,7 +95,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">
+        <ul class="sidebar navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="./homescreen.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -108,11 +108,11 @@
           <span>Quản lý KPI</span>
         </a>
         <div style="width: 100%" class="dropdown-menu" aria-labelledby="pagesDropdown">
-                  <a class="dropdown-item" href="./NhanVien/kpi/kpi_list.html">Danh sách KPI</a>
-                  <a class="dropdown-item" href="./NhanVien/kpi/employee_kpi.html">List of KPI for employees</a>
-                  <a class="dropdown-item" href="./NhanVien/kpi/dept_kpi.html">List of KPI for Marketing department</a>
-                  <a class="dropdown-item" href="./NhanVien/kpi/kpi_em.html">Personal KPI (Employee View)</a>
-                  <a class="dropdown-item" href="./NhanVien/kpi/kpi/kpi_dept.html">KPI Phòng Ban</a>
+                  <a class="dropdown-item" href="./kpi/kpi_list.html">Danh sách KPI</a>
+                  <a class="dropdown-item" href="./kpi/employee_kpi.html">List of KPI for employees</a>
+                  <a class="dropdown-item" href="./kpi/dept_kpi.html">List of KPI for Marketing department</a>
+                  <a class="dropdown-item" href="./kpi/kpi_em.html">Personal KPI (Employee View)</a>
+                  <a class="dropdown-item" href="./kpi/kpi/kpi_dept.html">KPI Phòng Ban</a>
         </div>
       </li>      
        <li class="nav-item dropdown">
@@ -121,8 +121,8 @@
           <span>Quản Lý Công Việc</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="./NhanVien/task_overview/task_overview.html">Tổng Quan</a>
-          <a class="dropdown-item" href="./NhanVien/task_management/tm_overview.html">Công Việc Phòng Ban</a>
+          <a class="dropdown-item" href="./task_overview/task_overview.html">Tổng Quan</a>
+          <a class="dropdown-item" href="./task_management/tm_overview.html">Công Việc Phòng Ban</a>
           <a class="dropdown-item" href="./task_management/review_overview.html">Đánh Giá Công Việc</a>
         </div>
       </li>       
@@ -132,8 +132,8 @@
           <span>Quản Lý Báo Cáo</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="./NhanVien/report/rp_overview.html">Tổng Quan</a>
-          <a class="dropdown-item" href="./NhanVien/report/reportArchive.html">Kho Lưu Trữ Báo Cáo</a>
+          <a class="dropdown-item" href="rp_overview.html">Tổng Quan</a>
+          <a class="dropdown-item" href="./report/reportArchive.html">Kho Lưu Trữ Báo Cáo</a>
           <a class="dropdown-item" href="rp_overview.html">...</a>
         </div>
       </li>
@@ -144,13 +144,13 @@
           <span>Demo Tác Nhân</span>
         </a>
         <div style=" width:100%" class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="./BGD/homescreen.html">BGĐ</a>
-          <a class="dropdown-item" href="./TruongPhong/homescreen.html">Trưởng Phòng Marketing</a>
-          <a class="dropdown-item" href="./homescreen.html">Nhân viên Phòng Marketing</a>
+          <a class="dropdown-item" href="../BGD/homescreen.html">BGĐ</a>
+          <a class="dropdown-item" href="./homescreen.html">Trưởng Phòng Marketing</a>
+          <a class="dropdown-item" href="../homescreen.html">Nhân viên Phòng Marketing</a>
         </div>
       </li>       
       <li class="nav-item active">
-        <a class="nav-link" href="./NhanVien/InfoPhongMarketing/Info.html">
+        <a class="nav-link" href="./InfoPhongMarketing/Info.html">
           <i class="fas fa-fw fa-folder"></i>
           <span>Info Phòng ban</span>
         </a>
@@ -167,7 +167,7 @@
             <a href="#">Dashboard</a>
           </li>
           <li class="breadcrumb-item active">Phòng Marketing</li>
-          <li class="breadcrumb-item active">Nhân Viên Phòng Marketing</li>
+          <li class="breadcrumb-item active">Trưởng Phòng Marketing</li>
         </ol>
 
         <!-- Icon Cards-->
@@ -178,22 +178,22 @@
                 <!-- <div class="card-body-icon">
                   <i class="fas fa-fw fa-comments"></i>
                 </div> -->
-                <img style="width: 100%" src="img/kpi.svg">
+                <img style="width: 100%" src="../img/kpi.svg">
                 <!-- <div>KPI Management</div> -->
               </div>
 
             </div>
             <div class="dropdown" >
                 <button style="width: 100%" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 Quản Lý KPI
+                  Quản lý KPI
                 </button>
                 <div style="width: 100%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./NhanVien/kpi/kpi_list.html">Danh sách KPI</a>
-                  <a class="dropdown-item" href="./NhanVien/kpi/employee_kpi.html">List of KPI for employees</a>
-                  <a class="dropdown-item" href="./NhanVien/kpi/dept_kpi.html">List of KPI for Marketing department</a>
-                  <a class="dropdown-item" href="./NhanVien/kpi/kpi_em.html">Personal KPI (Employee View)</a>
-                  <a class="dropdown-item" href="./NhanVien/kpi/kpi_ems.html">Personal KPI (Director View)</a>
-                  <a class="dropdown-item" href="./NhanVien/kpi/kpi_dept.html">KPI Phòng Ban</a>
+                  <a class="dropdown-item" href="kpi/kpi_list.html">Danh sách KPI</a>
+                  <a class="dropdown-item" href="kpi/employee_kpi.html">List of KPI for employees</a>
+                  <a class="dropdown-item" href="kpi/dept_kpi.html">List of KPI for Marketing department</a>
+                  <a class="dropdown-item" href="kpi/kpi_em.html">Personal KPI (Employee View)</a>
+                  <a class="dropdown-item" href="kpi/kpi_ems.html">Personal KPI (Director View)</a>
+                  <a class="dropdown-item" href="kpi/kpi_dept.html">KPI Phòng Ban</a>
                 </div>
               </div>
           </div>
@@ -203,7 +203,7 @@
                 <!-- <div class="card-body-icon">
                   <i class="fas fa-fw fa-comments"></i>
                 </div> -->
-                <img style="width: 100%" src="img/task.png">
+                <img style="width: 100%" src="../img/task.png">
                 <!-- <div>KPI Management</div> -->
               </div>
 
@@ -213,9 +213,9 @@
                   Quản Lý Công Việc
                 </button>
                 <div style="width: 100%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./NhanVien/task_overview/task_overview.html">Tổng Quan</a>
-                  <a class="dropdown-item" href="./NhanVien/task_management/tm_overview.html">Công Việc Phòng Ban</a>
-                  <a class="dropdown-item" href="#">...</a>
+                  <a class="dropdown-item" href="./task_overview/task_overview.html">Tổng Quan</a>
+                  <a class="dropdown-item" href="./task_management/tm_overview.html">Công Việc Phòng Ban</a>
+                  <a class="dropdown-item" href="./task_management/review_overview.html">Đánh Giá Công Việc</a>
                 </div>
               </div>
           </div>
@@ -226,7 +226,7 @@
                 <!-- <div class="card-body-icon">
                   <i class="fas fa-fw fa-comments"></i>
                 </div> -->
-                <img style="width: 100%" src="img/report.png">
+                <img style="width: 100%" src="../img/report.png">
                 <!-- <div>KPI Management</div> -->
               </div>
 
@@ -236,8 +236,8 @@
                   Quản Lý Báo Cáo
                 </button>
                 <div style="width: 100%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./NhanVien/report/rp_overview.html">Tổng Quan</a>
-                  <a class="dropdown-item" href="./NhanVien/report/reportArchive.html">Kho Lưu Trữ Báo Cáo</a>
+                  <a class="dropdown-item" href="./report/rp_overview.html">Tổng Quan</a>
+                  <a class="dropdown-item" href="./report/reportArchive.html">Kho Lưu Trữ Báo Cáo</a>
                   <a class="dropdown-item" href="rp_overview.html">...</a>
                 </div>
               </div>
@@ -256,13 +256,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./vendor/img/noti1.JPG" class="d-block w-100" alt="...">
+      <img src="../vendor/img/noti1.JPG" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="./vendor/img/noti1.JPG" class="d-block w-100" alt="...">
+      <img src="../vendor/img/noti1.JPG" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="./vendor/img/noti1.JPG" class="d-block w-100" alt="...">
+      <img src="../vendor/img/noti1.JPG" class="d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -275,13 +275,7 @@
   </a>
 </div>
         </div>
-      <footer class="sticky-footer">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Website Phòng Ban Marketing Nhóm 4 Lớp VUW-IT15</span>
-          </div>
-        </div>
-      </footer>
+
 
     </div>
     <!-- /.content-wrapper -->
@@ -335,23 +329,23 @@
 </script>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <script src="vendor/datatables/jquery.dataTables.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+  <script src="../vendor/chart.js/Chart.min.js"></script>
+  <script src="../vendor/datatables/jquery.dataTables.js"></script>
+  <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin.min.js"></script>
+  <script src="../js/sb-admin.min.js"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="../js/demo/datatables-demo.js"></script>
+  <script src="../js/demo/chart-area-demo.js"></script>
 
 </body>
 
