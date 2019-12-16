@@ -19,7 +19,7 @@
 
   <!-- Custom styles for this template-->
   <link href="../../css/sb-admin.css" rel="stylesheet">
-  <link href="../../hs.css" rel="stylesheet">
+  <link href="../../vendor/hs.css" rel="stylesheet">
   <link rel="stylesheet" href="../../js/task/adminlte.min.css">
   <link rel="stylesheet" href="../../vendor/summernote/summernote-bs4.css">
    
@@ -163,10 +163,9 @@
           <li class="breadcrumb-item">
             <a href="../../homescreen.html">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active"> Quản Lý Công Việc </li>
-          <li class="breadcrumb-item active"><a href="./tm_overview.html">Công Việc Phòng Ban</a></li>
-          <li class="breadcrumb-item active"><a href="./request_changedeadline_approve.html">Nội Dung Công Việc</a></li>
-            <li class="breadcrumb-item active">Xử Lý Yêu Cầu Gia Hạn Công Việc</li>
+          <li class="breadcrumb-item active"> Quản Lý Báo Cáo </li>
+          <li class="breadcrumb-item active"> Tạo Yêu Cầu Nộp Báo Cáo </li>
+    
         </ol>
 
         
@@ -176,8 +175,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <a href="./request_changedeadline_approve.html" data-toggle="confirm" data-title="Hủy Tiến Trình" data-message="Bạn Muốn Hủy Tiến Trình Này Không?" data-type="danger" class="btn btn-danger btn-block mb-3">Hủy </a>
-            <a href="../task_management/success_tasksubmit.html" data-toggle="confirm" data-title="Đồng Ý Yêu Cầu" data-message="Đồng Ý Gia Hạn?" data-type="primary" class="btn btn-primary btn-block mb-3">Đồng ý Gia Hạn</a>
+            <a href="./rp_overview.html" data-toggle="confirm" data-title="Hủy Tiến Trình" data-message="Bạn Muốn Hủy Tiến Trình Này Không?" data-type="danger" class="btn btn-danger btn-block mb-3">Hủy</a>
+            <a href="./success_tasksubmit.html" data-toggle="confirm" data-title="Tạo Thêm Việc Mới " data-message="Bạn Có Chắc Chắn Không?" data-type="primary" class="btn btn-primary btn-block mb-3">Gửi Yêu Cầu</a>
  
           <!-- /.card -->
  
@@ -186,44 +185,61 @@
           <!-- /.col -->
           <div class="col-md-9">
             <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h3 class="card-title">Nội Dung Yêu Cầu Gia Hạn</h3>
-                 
+              <div class="card-header" >
+                <h3 class="card-title">Nội Dung Yêu Cầu Báo Cáo Mới</h3>
+         
               </div>
               <!-- /.card-header -->
               
               <div class="card-body">
-                                    <span>Điều Chỉnh Hạn</span>
-                <div align="center" class="input-daterange input-group" id="datepicker">
-                    <span>Từ </span><input type="text" class="input-sm " name="start" />
-                    <span class="input-group-addon">đến</span>
-                    <input type="text" class="input-sm" name="end" />
+                <div class="form-group">
+                  <input class="form-control" placeholder="Tên Nội Dung:">
                 </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Giao công việc cho:">
+                </div>                
+                              
 
-                 <br>
+                 
 
                 <div class="form-group">
                     <textarea id="compose-textarea" class="form-control" style="height: 300px">
-                      <h1><u>Tiêu Đề Nội Dung </u></h1>
-                      <h4>Tiêu Đề Phụ</h4>
-                      <p>Chào anh Thành,</p>
-                      <p>
-                        Tôi đã tiếp nhận yêu cầu , và đồng ý . 
-                        Chúc nhóm Hoàn Thành sớm Nhiệm vụ được giao
-                        </p>
- 
-                      <p>Trân Trọng,</p>
-                      <p>Lâm</p>
+                      <h1><u>Tiêu Đề</u></h1>
+                      <h4>Tiêu đề phụ</h4>
+                <p>Thiết kế POSM là viết tắt của cụm từ Point Of Sales Material. Nó được hiểu như là một vật liệu quảng cáo, hỗ trợ cho công việc bán hàng, thiết kế profile thường được bố trí ở các siêu thị, cửa hàng…để giúp hỗ trợ chiến lược marketing và giúp quảng bá thương hiệu. POSM thường là những kệ bán hàng, booth bán hàng, standee, hoặc poster…. Đây là những thiết kế thường mang nét đặc trừng của sản phẩm và mang dấu ấn, hình ảnh của thương hiệu.</p>
+
+                <p>Có hai cách để lấy được sự quan tâm sử dụng của khách hàng:
+
+                Thứ nhất chính là thu hút sự quan tâm thiết kế bao bì của khách hàng ngay tại điểm mua bán, thuyết phục khách hàng quyết định mua hàng tại chỗ. Thứ hai đó chính là thông qua việc khách hàng sử dụng sản phẩm thử, cảm thấy hài lòng và quay lại với sản phẩm. Trong hai cách này thì POSM công ty thiết kế catalogue chuyên nghiệp đóng vai trò rất quan trọng trong việc làm nên sự thành công của cách thứ nhất. Lý do là bởi vì POSM có nhiệm vụ là thu hút sự chú ý của khách hàng, tôn vinh giá trị sản phẩm và hỗ trợ chiến dịch quảng cáo sản phẩm đó, thiet ke brochure  mang hình ảnh của thương hiệu đến gần hơn với khách hàng, thông tin, thuyết phục khách hàng qua nội dung mà nó truyền tải. Vì thế, thiết kế poster thiết kế POSM cũng đòi hỏi sự thẩm mỹ cao và nội dung cũng thư thiết kế tốt. Bên trên là các thông tin cơ bản về thiết kế POSM. Chúc các bạn thành công với thiết kế của mình.</p>
+                      <ul>
+                        <li>Các đầu mục</li>
+                        <li>Các đầu mục </li>
+                        <li>Các đầu mục </li>
+                        <li>Các đầu mục </li>
+                      </ul>
+                      <p>Trân trọng,</p>
+                      <p>John Doe</p>
                     </textarea>
                 </div>
-
- 
+                <span>Chọn Ngày Hạn Công Việc</span><br>
+                <div class="input-daterange input-group" id="datepicker">
+                    <span>Ngày Bắt Đầu </span><input type="text" class="input-sm " name="start" />
+                    <span class="input-group-addon"> Đến ngày </span>
+                    <input type="text" class="input-sm" name="end" />
+                </div>
+                <div align="center" class="form-group">
+                  <div class="btn btn-default btn-file">
+                    <i class="fas fa-paperclip"></i> Attachment
+                    <input type="file" name="attachment">
+                  </div>
+                  <p class="help-block">Dung Lượng Tối Đa. 32MB</p>
+                </div>
               </div>
  
               <!-- /.card-footer -->
             </div>
             <!-- /.card -->
- 
+                                 
           </div>
           <!-- /.col -->
           
@@ -265,7 +281,26 @@
     </div>
   </div>
 
- 
+  <script src="js/Chart.min.js"></script>
+
+<script type="text/javascript">
+  //doughnut
+  var ctxD = document.getElementById("doughnutChart").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+    labels: ["Danger", "Done", "Todo", "Doing"],
+    datasets: [{
+    data: [40, 300, 100, 50],
+    backgroundColor: ["#d9534f", "#5cb85c", "#ffff00", "#428bca"],
+    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
+    }]
+    },
+    options: {
+      responsive: true
+    }
+  });
+</script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="../../vendor/jquery/jquery.min.js"></script>
