@@ -152,79 +152,79 @@
 
     </ul>
 
-    <div id="content-wrapper">
+        <div id="content-wrapper">
 
       <div class="container-fluid">
 
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
-         
           <li class="breadcrumb-item">
             <a href="../../homescreen.html">Dashboard</a>
-          </li>          
-           <li class="breadcrumb-item">
+          </li>
+          <li class="breadcrumb-item">
              Phòng Marketing 
           </li>
-          <li class="breadcrumb-item active">KPI Nhân viên</li>
+          <li class="breadcrumb-item active">Danh sách KPI</li>
         </ol>
-
+        <div style="padding:10px" class="row">
+                <div class="col-md-3">
+ 
+                <a href="add_kpi.html" class="btn btn-primary btn-block mb-3" role="button" aria-pressed="true">Thêm KPI</a>
+              </div>
+        
+        <div class="col-md-9">
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h3 class="card-title">Chỉ tiêu cho nhân viên </h3>
         
 
-        <!-- DataTables Example -->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-table"></i>
-            Bảng mục tiêu Phòng Marketing</div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>STT</th>
-                    <th>ID</th>
-                    <th>Họ tên</th>
-                    <th>Phòng ban</th>
-                    <th>Vị trí</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td><a href="kpi_em.html">0001</a></td>
-                    <td>Nguyễn Văn A</td>
-                    <td>5000 marketing contacts</td>
-                    <td>5000 marketing contacts</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td><a href="kpi_em.html">0039</a></td>
-                    <td>Nguyễn Văn B</td>
-                    <td>5000 marketing contacts</td>
-                    <td>5000 marketing contacts</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td><a href="kpi_em1.html">0065</a></td>
-                    <td>Nguyễn Văn C</td>
-                    <td>5000 marketing contacts</td>
-                    <td>5000 marketing contacts</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td><a href="kpi_em.html">0071</a></td>
-                    <td>Nguyễn Văn D</td>
-                    <td>5000 marketing contacts</td>
-                    <td>5000 marketing contacts</td>
-                  </tr>
-                </tbody>
-              </table>
+        <!-- Icon Cards-->
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Tên KPI</th>
+                <th>Mô tả</th>
+                <th>Điểm thưởng</th>
+                <th>Người tạo</th>
+                <th>Ngày tạo</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>KPI tháng 11 năm 2019</td>
+                <td>Description</td>
+                <td>10</td>
+                <td>Nguyễn Văn A</td>
+                <td>16/09/2019</td>
+                <td>
+                	<a href="add_kpi.html"><i class="fas fa-edit"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>KPI tháng 12 năm 2019</td>
+                <td>Description</td>
+                <td>10</td>
+                <td>Nguyễn Văn A</td>
+                <td>16/09/2019</td>
+                <td>
+                  <a href="add_kpi.html"><i class="fas fa-edit"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>        
+      </div>
             </div>
           </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-        </div>
-
-
+          </div>
       </div>
+      <!-- /.container-fluid -->
+        
+
+    </div>
       <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->
@@ -235,10 +235,6 @@
           </div>
         </div>
       </footer>
-
-    </div>
-    <!-- /.content-wrapper -->
-
   </div>
   <!-- /#wrapper -->
 
@@ -266,29 +262,90 @@
     </div>
   </div>
 
-  <script src="../js/Chart.min.js"></script>
+<!-- JQuery -->
+ 
 
 <script type="text/javascript">
   //doughnut
-  var ctxD = document.getElementById("doughnutChart").getContext('2d');
-  var myLineChart = new Chart(ctxD, {
-    type: 'doughnut',
-    data: {
-    labels: ["Danger", "Done", "Todo", "Doing"],
-    datasets: [{
-    data: [40, 300, 100, 50],
-    backgroundColor: ["#d9534f", "#5cb85c", "#ffff00", "#428bca"],
-    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
-    }]
-    },
-    options: {
-      responsive: true
-    }
-  });
+  $(document).ready(function () {
+    var counter = 0;
+
+    $("#addrow").on("click", function () {
+        var newRow = $("<tr>");
+        var cols = "";
+        var select = "<td scope='row'><select class='form-control'><option value='' disabled selected>Số lượng sản phẩm bán được</option><option value='1'>Doanh số theo sản phẩm</option><option value='2'>Doanh thu theo sản phẩm</option><option value='3'>Số lần đi muộn</option><option value='4'>Tổng vắng</option><option value='5'>Số khách hàng mua hàng</option><option value='6'>Số khách hàng tạo mới</option><option value='7'>Số khách hàng tương tác</option><option value='8'>Số khách hàng phụ trách</option><option value='9'>Tỷ lệ (%) số khách hàng tương tác / số khacsh hàng phụ trách</option><option>Tỷ lệ (%) số khách hàng mua hàng / số khách hàng phụ trách</option></select></td>";
+
+
+        cols += select;
+        cols += '<td><input type="text" class="form-control" name="mail' + counter + '" placeholder="Mô tả ngắn"/></td>';
+        cols += '<td><input type="text" class="form-control" name="phone' + counter + '" placeholder="20"/></td>';
+
+        cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
+        newRow.append(cols);
+        $("#table-list").append(newRow);
+        counter++;
+    });
+
+
+
+    $("#table-list").on("click", ".ibtnDel", function (event) {
+        $(this).closest("tr").remove();       
+        counter -= 1
+    });
+
+    $("#addrow1").on("click", function () {
+        var newRow = $("<tr>");
+        var cols = "";
+
+        cols += '<td><input type="text" class="form-control" name="mail' + counter + '" placeholder="Tên chỉ tiêu"/></td>';
+        cols += '<td><input type="text" class="form-control" name="mail' + counter + '" placeholder="Mô tả ngắn"/></td>';
+        cols += '<td><input type="text" class="form-control" name="phone' + counter + '" placeholder="20"/></td>';
+
+        cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
+        newRow.append(cols);
+        $("#table-list1").append(newRow);
+        counter++;
+    });
+
+
+
+    $("#table-list1").on("click", ".ibtnDel", function (event) {
+        $(this).closest("tr").remove();       
+        counter -= 1
+    });
+
+    $("#table-list").on("click", ".ibtnDel", function (event) {
+        $(this).closest("tr").remove();       
+        counter -= 1
+    });
+
+    $("#addrow2").on("click", function () {
+        var newRow = $("<tr>");
+        var cols = "";
+
+        cols += '<td><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="81"></td>';
+        cols += '<td><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="95"></td>';
+        cols += '<td><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="1.2"></td>';
+
+        cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
+
+        newRow.append(cols);
+        $("#table-list2").append(newRow);
+        counter++;
+    });
+
+
+
+    $("#table-list2").on("click", ".ibtnDel", function (event) {
+        $(this).closest("tr").remove();       
+        counter -= 1
+    });
+
+});
 </script>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="../../vendor/jquery/jquery.min.js"></script>
+   <script src="../../vendor/jquery/jquery.min.js"></script>
   <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -304,7 +361,7 @@
 
   <!-- Demo scripts for this page-->
   <script src="../../js/demo/datatables-demo.js"></script>
-  <script src="../../js/demo/chart-area-demo.js"></script>
+  <script src="../../js/demo/chart-area-demo.js"></script>  
 
 </body>
 
