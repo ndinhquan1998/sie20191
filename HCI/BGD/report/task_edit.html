@@ -16,10 +16,15 @@
 
   <!-- Page level plugin CSS-->
   <link href="../../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
+ 
   <!-- Custom styles for this template-->
   <link href="../../css/sb-admin.css" rel="stylesheet">
+   
   <link href="../../hs.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../js/task/adminlte.min.css">
+  <link rel="stylesheet" href="../../vendor/summernote/summernote-bs4.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.6/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+
 
 </head>
 
@@ -162,162 +167,85 @@
             <a href="../homescreen.html">Dashboard</a>
           </li>
           <li class="breadcrumb-item active"> Quản Lý Báo Cáo </li>
-             
+          <li class="breadcrumb-item active"><a href="./view_task.html">Nội Dung Yêu Cầu Báo Cáo</a></li>
+          <li class="breadcrumb-item active">Nộp Nội Dung Báo Cáo</li>
         </ol>
 
         
         </div>
                 <!-- Main content -->
-    <section class="content">
-      <div style="padding:10px" class="row">
-        <div class="col-md-3">
-          <a href="./rp_overview.html" class="btn btn-primary btn-block mb-3">Quay Trở Lại</a>
-          <a href="./task_edit.html" class="btn btn-primary btn-block mb-3">Sửa Báo Cáo</a>
-
+        <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <a href="./view_task.html" data-toggle="confirm" data-title="Wait!" data-message="Are you sure to discard progress?" data-type="danger" class="btn btn-danger btn-block mb-3">Hủy</a>
+            <a href="./success_tasksubmit.html" data-toggle="confirm" data-message="Are you sure to confirm progress?" data-type="primary" class="btn btn-primary btn-block mb-3"> Gửi Nội Dung Báo Cáo</a>
+            <!-- /.card -->
  
-          <!-- /.card -->
- 
-          <!-- /.card -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-9">
-          <div class="card card-primary card-outline">
-            <div class="card-header">
-              <h3 class="card-title">Tiêu Đề Báo Cáo</h3>
-
-              <div class="card-tools">
-                <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Previous"><i class="fas fa-chevron-left"></i></a>
-                <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Next"><i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body p-0">
-              <div class="mailbox-read-info">
-                <h6>
-                  <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span></h6>
-              </div>
-              <!-- /.mailbox-read-info -->
-              <div class="mailbox-controls with-border text-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Delete">
-                    <i class="far fa-trash-alt"></i></button>
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Reply">
-                    <i class="fas fa-reply"></i></button>
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Forward">
-                    <i class="fas fa-share"></i></button>
-                </div>
-                <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Print">
-                  <i class="fas fa-print"></i></button>
-              </div>
-              <!-- /.mailbox-controls -->
-              <div class="mailbox-read-message" align="center">
-                <b>LATEST REPORTS</b>
-                <table border="1">
-                  <thead>
-                    <tr>
-                      <th>STT</th>
-                      <th>Mã nhân viên</th>
-                      <th>Tháng 6/2019</th>
-                      <th>Tháng 7/2019</th>
-                      <th>Tháng 8/2019</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                  
-                  </tfoot>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>NV003</td>
-                      <td>5.03</td>
-                      <td>4.1</td>
-                      <td>4.2</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>NV004</td>
-                      <td>5.03</td>
-                      <td>4.1</td>
-                      <td>4.2</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>NV005</td>
-                      <td>5.03</td>
-                      <td>4.1</td>
-                      <td>4.2</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.mailbox-read-message -->
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer bg-white">
-              <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
-                <li>
-                  <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
-
-                  <div class="mailbox-attachment-info">
-                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> June2019-report.pdf</a>
-                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span>1,245 KB</span>
-                          <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                        </span>
-                  </div>
-                </li>
-                <li>
-                  <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
-
-                  <div class="mailbox-attachment-info">
-                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> July2019-reprot.pdf</a>
-                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span>1,245 KB</span>
-                          <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                        </span>
-                  </div>
-                </li>
-                <li>
-                  <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
-
-                  <div class="mailbox-attachment-info">
-                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i> August2019-report.pdf</a>
-                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span>2.67 MB</span>
-                          <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                        </span>
-                  </div>
-                </li>
-                <li>
-                  <span class="mailbox-attachment-icon has-img"><img src="" alt="Attachment"></span>
-
-                  <div class="mailbox-attachment-info">
-                    <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i> Archive.zip</a>
-                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span>1.9 MB</span>
-                          <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                        </span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!-- /.card-footer -->
-            <div class="card-footer">
-               
-              <button type="button" class="btn btn-default"><i class="fas fa-print"></i> In Nội Dung</button>
-            </div>
-            <!-- /.card-footer -->
+            <!-- /.card -->
           </div>
+          <!-- /.col -->
+        <div class="col-md-9">
+          
           <!-- /.card -->
-        </div>
+                    <div class="">
+            <div class="card card-primary card-outline">
+              <div class="card-header" data-card-widget="collapse">
+                <h3 class="card-title">Nội Dung Nộp</h3>
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus float-right"></i>
+                  </button>
+              </div>
+              <!-- /.card-header -->
+              
+              <div class="card-body">
+                <div class="form-group">
+                    <textarea id="compose-textarea" class="form-control" style="height: 300px">
+                      <h1><u>Tiêu Đề Nội Dung</u></h1>
+                      <h4>Tiêu Đề Phụ</h4>
+                      <p>Thiết kế POSM là viết tắt của cụm từ Point Of Sales Material. Nó được hiểu như là một vật liệu quảng cáo, hỗ trợ cho công việc bán hàng, thiết kế profile thường được bố trí ở các siêu thị, cửa hàng…để giúp hỗ trợ chiến lược marketing và giúp quảng bá thương hiệu. POSM thường là những kệ bán hàng, booth bán hàng, standee, hoặc poster…. Đây là những thiết kế thường mang nét đặc trừng của sản phẩm và mang dấu ấn, hình ảnh của thương hiệu.</p>
+                      <ul>
+                        <li>Ý tưởng nội dung 1</li>
+                        <li>Ý tưởng nội dung 2</li>
+                        <li>Ý tưởng nội dung 3</li>
+                        <li>Ý tưởng nội dung 4</li>
+                      </ul>
+ 
+                    </textarea>
+                </div>
+     
+ 
+                                 <div align="center" class="form-group">
+                  <div class="btn btn-default btn-file">
+                    <i class="fas fa-paperclip"></i> Attachment
+                    <input type="file" name="attachment">
+                  </div>
+                  <p class="help-block">Dung Lượng Tối Đa. 32MB</p>
+                </div>
+
+
+              </div>
+              <!-- /.card-body -->
+ 
+
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
         </div>
         <!-- /.col -->
-       
-        <!-- /.row --> 
+      </div>
+          <!-- /.row -->
+          </div>
     </section>
+    </div>
+             <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Website Phòng Ban Marketing Nhóm 4 Lớp VUW-IT15</span>
+          </div>
         </div>
-    </div> 
+      </footer>
+        </div>
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
@@ -343,46 +271,47 @@
     </div>
   </div>
 
-  <script src="../js/Chart.min.js"></script>
 
-<script type="text/javascript">
-  //doughnut
-  var ctxD = document.getElementById("doughnutChart").getContext('2d');
-  var myLineChart = new Chart(ctxD, {
-    type: 'doughnut',
-    data: {
-    labels: ["Danger", "Done", "Todo", "Doing"],
-    datasets: [{
-    data: [40, 300, 100, 50],
-    backgroundColor: ["#d9534f", "#5cb85c", "#ffff00", "#428bca"],
-    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
-    }]
-    },
-    options: {
-      responsive: true
-    }
-  });
-</script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="../../vendor/jquery/jquery.min.js"></script>
   <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Page level plugin JavaScript-->
-  <script src="../../vendor/chart.js/Chart.min.js"></script>
-  <script src="../../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="../../js/sb-admin.min.js"></script>
+  <script src="../../vendor/summernote/summernote-bs4.min.js"></script>
+  <script src="../../js/task/demo.js"></script>
+  <script src="../../js/task/adminlte.min.js"></script>
+  <script src="../../vendor/bootstrap.confirm.js"></script>
+ 
+   <script>
+$(function () {
+    //Add text editor
+    $('#compose-textarea').summernote()
+  });
+</script>
+<script>
+$(document).ready(function(){
+    $('#input-1').rating({min: 0, max: 5, step: 0.1, stars: 2});
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.6/js/star-rating.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
 
-  <!-- Demo scripts for this page-->
-  <script src="../../js/demo/datatables-demo.js"></script>
-  <script src="../../js/demo/chart-area-demo.js"></script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? '' : '') + '';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 
 </html>
